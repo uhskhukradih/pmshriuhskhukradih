@@ -1,1 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Academics | PM SHRI UHS Khukradih</title>
+
+<meta name="description"
+content="Academic information of PM SHRI Upgraded Govt. High School, Khukradih, East Singhbhum, Jharkhand.">
+
+<style>
+
+/* =========================
+   BASIC
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.7;
+    color:#222;
+    background:#f5f7fb;
+}
+
+a{
+    text-decoration:none;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    background:white;
+    padding:15px 6%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    box-shadow:0 2px 10px rgba(0,0,0,.12);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.school-logo{
+    width:72px;
+    height:72px;
+    border-radius:50%;
+    background:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border:3px solid #063b7a;
+    overflow:hidden;
+    flex-shrink:0;
+}
+
+.school-logo img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    border-radius:50%;
+}
+
+
+/* =========================
+   SCHOOL NAME
+========================= */
+
+.school-name h1{
+    color:#063b7a;
+    font-size:21px;
+    line-height:1.25;
+}
+
+.school-name h2{
+    color:#d88900;
+    font-size:15px;
+    margin-top:3px;
+}
+
+.school-name p{
+    font-size:12px;
+    color:#555;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav ul{
+    list-style:none;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:17px;
+}
+
+nav a{
+    color:#123;
+    font-weight:bold;
+    font-size:13px;
+}
+
+nav a:hover{
+    color:#d88900;
+}
+
+
+/* =========================
+   PAGE HERO
+========================= */
+
+.page-hero{
+    background:
+    linear-gradient(135deg,#063b7a,#1769aa);
+    color:white;
+    text-align:center;
+    padding:75px 20px;
+}
+
+.page-hero h1{
+    font-size:40px;
+    margin-bottom:8px;
+}
+
+.page-hero h2{
+    font-size:21px;
+    font-weight:normal;
+}
+
+
+/* =========================
+   COMMON SECTIONS
+========================= */
+
+section{
+    padding:65px 7%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    color:#063b7a;
+    font-size:31px;
+}
+
+.section-title p{
+    color:#777;
+    margin-top:5px;
+}
+
+
+/* =========================
+   CLASSES
+========================= */
+
+.classes-section{
+    background:white;
+}
+
+.classes-box{
+    max-width:900px;
+    margin:auto;
+    background:#f5f8fd;
+    border:1px solid #e0e8f5;
+    border-radius:18px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 5px 18px rgba(0,0,0,.07);
+}
+
+.classes-icon{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:#063b7a;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 18px;
+    font-size:28px;
+}
+
+.classes-box h3{
+    color:#063b7a;
+    font-size:25px;
+    margin-bottom:8px;
+}
+
+.classes-box p{
+    color:#555;
+    font-size:16px;
+}
+
+
+/* =========================
+   ACADEMIC OVERVIEW
+========================= */
+
+.academic-overview{
+    background:#eef5ff;
+}
+
+.academic-content{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.academic-card{
+    background:white;
+    padding:35px;
+    border-radius:16px;
+    border-left:5px solid #063b7a;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+.academic-card h3{
+    color:#063b7a;
+    font-size:22px;
+    margin-bottom:18px;
+}
+
+.academic-card p{
+    margin-bottom:15px;
+}
+
+.hindi-card{
+    border-left-color:#d88900;
+}
+
+
+/* =========================
+   KEY FEATURES
+========================= */
+
+.features-section{
+    background:white;
+}
+
+.features-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.feature-card{
+    background:#f5f8fd;
+    padding:28px 22px;
+    border-radius:15px;
+    text-align:center;
+    border:1px solid #e1e8f2;
+    transition:.3s;
+}
+
+.feature-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 20px rgba(0,0,0,.09);
+}
+
+.feature-icon{
+    font-size:38px;
+    margin-bottom:12px;
+}
+
+.feature-card h3{
+    color:#063b7a;
+    margin-bottom:8px;
+    font-size:19px;
+}
+
+.feature-card p{
+    font-size:14px;
+    color:#555;
+}
+
+
+/* =========================
+   ACADEMIC ACTIVITIES
+========================= */
+
+.activities-section{
+    background:#eef5ff;
+}
+
+.activities-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.activity-card{
+    background:white;
+    padding:28px 22px;
+    border-radius:15px;
+    box-shadow:0 5px 18px rgba(0,0,0,.07);
+}
+
+.activity-icon{
+    font-size:35px;
+    margin-bottom:10px;
+}
+
+.activity-card h3{
+    color:#063b7a;
+    margin-bottom:8px;
+}
+
+.activity-card p{
+    font-size:14px;
+    color:#555;
+}
+
+
+/* =========================
+   ACADEMIC SESSION
+========================= */
+
+.session-section{
+    background:#fff8e8;
+    text-align:center;
+}
+
+.session-box{
+    max-width:850px;
+    margin:auto;
+    background:white;
+    padding:35px;
+    border-radius:18px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.session-icon{
+    font-size:45px;
+    margin-bottom:10px;
+}
+
+.session-box h3{
+    color:#063b7a;
+    font-size:25px;
+    margin-bottom:10px;
+}
+
+.session-box p{
+    margin-bottom:8px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#032752;
+    color:white;
+    padding:35px 7% 20px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:30px;
+}
+
+footer h3{
+    margin-bottom:12px;
+}
+
+footer p,
+footer li{
+    font-size:14px;
+    color:#dbe7f5;
+}
+
+footer ul{
+    list-style:none;
+}
+
+footer li{
+    margin-bottom:6px;
+}
+
+footer a{
+    color:#dbe7f5;
+}
+
+.copyright{
+    border-top:1px solid rgba(255,255,255,.2);
+    margin-top:25px;
+    padding-top:15px;
+    text-align:center;
+    font-size:13px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:1050px){
+
+    header{
+        flex-direction:column;
+    }
+
+}
+
+@media(max-width:700px){
+
+    .school-logo{
+        width:60px;
+        height:60px;
+    }
+
+    .school-name h1{
+        font-size:16px;
+    }
+
+    .school-name h2{
+        font-size:12px;
+    }
+
+    nav ul{
+        gap:9px;
+    }
+
+    nav a{
+        font-size:12px;
+    }
+
+    .page-hero h1{
+        font-size:30px;
+    }
+
+    .academic-content{
+        grid-template-columns:1fr;
+    }
+
+    .features-grid,
+    .activities-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:50px 5%;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+
+<div class="logo-area">
+
+
+<div class="school-logo">
+
+<img src="logo.png"
+alt="PM SHRI UHS Khukradih Logo">
+
+</div>
+
+
+<div class="school-name">
+
+<h1>
+PM SHRI UHS KHUKRADIH
+</h1>
+
+<h2>
+PM SHRI UPGRADED GOVT. HIGH SCHOOL
+</h2>
+
+<p>
+Khukradih, East Singhbhum, Jharkhand
+</p>
+
+</div>
+
+
+</div>
+
+
+<nav>
+
+<ul>
+
+<li>
+<a href="index.html">Home</a>
+</li>
+
+<li>
+<a href="about.html">About School</a>
+</li>
+
+<li>
+<a href="academics.html">Academics</a>
+</li>
+
+<li>
+<a href="staff.html">Staff</a>
+</li>
+
+<li>
+<a href="facilities.html">Facilities</a>
+</li>
+
+<li>
+<a href="gallery.html">Gallery</a>
+</li>
+
+<li>
+<a href="notices.html">Notice Board</a>
+</li>
+
+<li>
+<a href="events.html">Events</a>
+</li>
+
+<li>
+<a href="admission.html">Admission</a>
+</li>
+
+<li>
+<a href="contact.html">Contact</a>
+</li>
+
+</ul>
+
+</nav>
+
+
+</header>
+
+
+<!-- =========================
+     PAGE HERO
+========================= -->
+
+<section class="page-hero">
+
+<h1>
+Academics
+</h1>
+
+<h2>
+शैक्षणिक व्यवस्था
+</h2>
+
+</section>
+
+
+<!-- =========================
+     CLASSES
+========================= -->
+
+<section class="classes-section">
+
+
+<div class="section-title">
+
+<h2>
+Classes Offered
+</h2>
+
+<p>
+उपलब्ध कक्षाएँ
+</p>
+
+</div>
+
+
+<div class="classes-box">
+
+
+<div class="classes-icon">
+🎓
+</div>
+
+
+<h3>
+KG to Class 10
+</h3>
+
+
+<p>
+कक्षा KG से कक्षा 10 तक
+</p>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     ACADEMIC OVERVIEW
+========================= -->
+
+<section class="academic-overview">
+
+
+<div class="section-title">
+
+<h2>
+Academic Overview
+</h2>
+
+<p>
+शैक्षणिक परिचय
+</p>
+
+</div>
+
+
+<div class="academic-content">
+
+
+<!-- ENGLISH -->
+
+<div class="academic-card">
+
+<h3>
+📚 Our Academic Approach
+</h3>
+
+
+<p>
+At PM SHRI Upgraded Govt. High School, Khukradih, our academic
+structure aligns with the National Education Policy (NEP 2020).
+We focus on Competency-Based Education to foster critical
+thinking and practical skills.
+</p>
+
+
+<p>
+With a well-equipped Computer Aided Learning Lab and smart
+classrooms, we provide an interactive digital curriculum from
+Grades KG to 10.
+</p>
+
+
+</div>
+
+
+<!-- HINDI -->
+
+<div class="academic-card hindi-card">
+
+<h3>
+📖 हमारा शैक्षणिक दृष्टिकोण
+</h3>
+
+
+<p>
+पीएम श्री उन्नत शासकीय उच्च विद्यालय, खुकरडीह में हमारा
+शैक्षणिक ढांचा राष्ट्रीय शिक्षा नीति (NEP 2020) के अनुरूप है।
+हम रटने की बजाय योग्यता-आधारित शिक्षा
+(Competency-Based Learning) पर ध्यान केंद्रित करते हैं ताकि
+बच्चों में तार्किक सोच विकसित हो।
+</p>
+
+
+<p>
+हमारे यहाँ कंप्यूटर एडेड लर्निंग लैब और स्मार्ट क्लासरूम के
+माध्यम से कक्षा KG से 10 तक के विद्यार्थियों को डिजिटल व
+इंटरैक्टिव शिक्षा दी जाती है।
+</p>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     KEY FEATURES
+========================= -->
+
+<section class="features-section">
+
+
+<div class="section-title">
+
+<h2>
+Key Academic Features
+</h2>
+
+<p>
+प्रमुख शैक्षणिक विशेषताएँ
+</p>
+
+</div>
+
+
+<div class="features-grid">
+
+
+<div class="feature-card">
+
+<div class="feature-icon">
+💻
+</div>
+
+<h3>
+Computer Aided Learning Lab
+</h3>
+
+<p>
+कंप्यूटर एडेड लर्निंग लैब के माध्यम से
+डिजिटल शिक्षा।
+</p>
+
+</div>
+
+
+<div class="feature-card">
+
+<div class="feature-icon">
+📱
+</div>
+
+<h3>
+Smart Classrooms
+</h3>
+
+<p>
+स्मार्ट क्लासरूम द्वारा इंटरैक्टिव
+और आधुनिक शिक्षण।
+</p>
+
+</div>
+
+
+<div class="feature-card">
+
+<div class="feature-icon">
+🧠
+</div>
+
+<h3>
+Competency-Based Learning
+</h3>
+
+<p>
+विद्यार्थियों में तार्किक सोच एवं
+व्यावहारिक कौशल का विकास।
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     ACADEMIC ACTIVITIES
+========================= -->
+
+<section class="activities-section">
+
+
+<div class="section-title">
+
+<h2>
+Academic Activities
+</h2>
+
+<p>
+शैक्षणिक गतिविधियाँ
+</p>
+
+</div>
+
+
+<div class="activities-grid">
+
+
+<div class="activity-card">
+
+<div class="activity-icon">
+💻
+</div>
+
+<h3>
+Digital Learning
+</h3>
+
+<p>
+Digital resources and smart classrooms
+support interactive learning.
+</p>
+
+</div>
+
+
+<div class="activity-card">
+
+<div class="activity-icon">
+🧪
+</div>
+
+<h3>
+Practical Learning
+</h3>
+
+<p>
+Students are encouraged to understand
+concepts through practical activities.
+</p>
+
+</div>
+
+
+<div class="activity-card">
+
+<div class="activity-icon">
+🏆
+</div>
+
+<h3>
+Quiz & Competitions
+</h3>
+
+<p>
+Educational competitions encourage
+confidence and creative thinking.
+</p>
+
+</div>
+
+
+<div class="activity-card">
+
+<div class="activity-icon">
+📚
+</div>
+
+<h3>
+Reading Activities
+</h3>
+
+<p>
+Reading activities encourage students
+to develop good learning habits.
+</p>
+
+</div>
+
+
+<div class="activity-card">
+
+<div class="activity-icon">
+🎨
+</div>
+
+<h3>
+Creative Activities
+</h3>
+
+<p>
+Creative activities support the overall
+development of students.
+</p>
+
+</div>
+
+
+<div class="activity-card">
+
+<div class="activity-icon">
+⚽
+</div>
+
+<h3>
+Sports & Physical Activities
+</h3>
+
+<p>
+Sports and physical activities promote
+fitness, teamwork and discipline.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     ACADEMIC SESSION
+========================= -->
+
+<section class="session-section">
+
+
+<div class="section-title">
+
+<h2>
+Academic Session
+</h2>
+
+<p>
+शैक्षणिक सत्र
+</p>
+
+</div>
+
+
+<div class="session-box">
+
+
+<div class="session-icon">
+📅
+</div>
+
+
+<h3>
+April – March
+</h3>
+
+
+<p>
+The academic session of the school runs
+from April to March.
+</p>
+
+
+<p>
+विद्यालय का शैक्षणिक सत्र अप्रैल से मार्च
+तक चलता है।
+</p>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+
+<div class="footer-grid">
+
+
+<div>
+
+<h3>
+PM SHRI UHS KHUKRADIH
+</h3>
+
+<p>
+PM SHRI Upgraded Govt. High School, Khukradih
+</p>
+
+<p>
+Jamshedpur, East Singhbhum, Jharkhand
+</p>
+
+</div>
+
+
+<div>
+
+<h3>
+Quick Links
+</h3>
+
+<ul>
+
+<li>
+<a href="index.html">
+Home
+</a>
+</li>
+
+<li>
+<a href="about.html">
+About School
+</a>
+</li>
+
+<li>
+Academics
+</li>
+
+<li>
+<a href="gallery.html">
+Gallery
+</a>
+</li>
+
+<li>
+<a href="notices.html">
+Notice Board
+</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h3>
+Contact
+</h3>
+
+<p>
+📍 Khukradih
+</p>
+
+<p>
+East Singhbhum, Jharkhand
+</p>
+
+<p>
+🇮🇳 India
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 PM SHRI UHS KHUKRADIH • Official School Website
+
+</div>
+
+
+</footer>
+
+
+</body>
+
+</html>
