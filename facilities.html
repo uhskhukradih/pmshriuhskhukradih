@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Campus & Facilities | PM SHRI UHS Khukradih</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #0b4f8a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        nav {
+            background: #083b66;
+            text-align: center;
+            padding: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.45),
+                        rgba(0, 0, 0, 0.45)),
+                        url("images/school-campus.jpg");
+
+            background-size: cover;
+            background-position: center;
+            height: 280px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: white;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 38px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .intro h2 {
+            color: #0b4f8a;
+            margin-bottom: 10px;
+        }
+
+        .facilities {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .facility-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+            transition: transform 0.3s;
+        }
+
+        .facility-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .facility-image {
+            width: 100%;
+            height: 180px;
+            background: #dfe6ed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 16px;
+        }
+
+        .facility-card h3 {
+            color: #0b4f8a;
+            padding: 15px 15px 5px;
+        }
+
+        .facility-card p {
+            padding: 0 15px 20px;
+            font-size: 14px;
+        }
+
+        footer {
+            background: #083b66;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 800px) {
+            .facilities {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 550px) {
+            header h1 {
+                font-size: 22px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 7px;
+            }
+
+            .hero h2 {
+                font-size: 30px;
+            }
+
+            .facilities {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>PM SHRI UHS Khukradih</h1>
+        <p>Quality Education • Holistic Development • Bright Future</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="academic.html">Academic</a>
+        <a href="facilities.html">Facilities</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <section class="hero">
+        <h2>Campus & Facilities</h2>
+    </section>
+
+    <div class="container">
+
+        <section class="intro">
+            <h2>Our Campus & Facilities</h2>
+
+            <p>
+                PM SHRI UHS Khukradih provides a safe, supportive and
+                learning-friendly environment for students. Our campus
+                facilities are designed to support academic learning,
+                creativity, physical development and overall growth.
+            </p>
+        </section>
+
+        <section class="facilities">
+
+            <div class="facility-card">
+                <div class="facility-image">
+                    School Campus Photo
+                </div>
+
+                <h3>School Campus</h3>
+
+                <p>
+                    A clean, safe and welcoming campus that provides
+                    students with a positive learning environment.
+                </p>
+            </div>
+
+
+            <div class="facility-card">
+                <div class="facility-image">
+                    Classroom Photo
+                </div>
+
+                <h3>Classrooms</h3>
+
+                <p>
+                    Well-maintained classrooms designed to provide
+                    students with a comfortable learning atmosphere.
+                </p>
+            </div>
+
+
+            <div class="facility-card">
+                <div class="facility-image">
+                    Library Photo
+                </div>
+
+                <h3>Library</h3>
+
+                <p>
+                    A learning space where students can read, explore
+                    books and develop a habit of self-learning.
+                </p>
+            </div>
+
+
+            <div class="facility-card">
+                <div class="facility-image">
+                    Computer Lab Photo
+                </div>
+
+                <h3>Computer Lab</h3>
+
+                <p>
+                    Computer facilities to help students develop
+                    digital skills and understand modern technology.
+                </p>
+            </div>
+
+
+            <div class="facility-card">
+                <div class="facility-image">
+                    Science Lab Photo
+                </div>
+
+                <h3>Science Laboratory</h3>
+
+                <p>
+                    A practical learning environment where students
+                    can understand scientific concepts through activities.
+                </p>
+            </div>
+
+
+            <div class="facility-card">
+                <div class="facility-image">
+                    Playground Photo
+                </div>
+
+                <h3>Playground</h3>
+
+                <p>
+                    Open space for sports, physical activities and
+                    healthy development of students.
+                </p>
+            </div>
+
+
+            <div class="facility-card">
+                <div class="facility-image">
+                    Drinking Water Photo
+                </div>
+
+                <h3>Drinking Water</h3>
+
+                <p>
+                    Drinking water facilities are available for
+                    students and staff.
+                </p>
+            </div>
+
+
+            <div class="facility-card">
+                <div class="facility-image">
+                    School Activity Photo
+                </div>
+
+                <h3>Activity Areas</h3>
+
+                <p>
+                    Spaces for educational, cultural and co-curricular
+                    activities that encourage student participation.
+                </p>
+            </div>
+
+
+            <div class="facility-card">
+                <div class="facility-image">
+                    Other Facility Photo
+                </div>
+
+                <h3>Other Facilities</h3>
+
+                <p>
+                    Additional facilities supporting the overall
+                    educational and developmental needs of students.
+                </p>
+            </div>
+
+        </section>
+
+    </div>
+
+    <footer>
+        <p>© 2026 PM SHRI UHS Khukradih. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
