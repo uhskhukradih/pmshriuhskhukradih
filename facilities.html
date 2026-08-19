@@ -108,15 +108,11 @@
             transform: translateY(-5px);
         }
 
-        .facility-image {
-            width: 100%;
-            height: 180px;
-            background: #dfe6ed;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666;
-            font-size: 16px;
+        .facility-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
         }
 
         .facility-card h3 {
@@ -201,8 +197,8 @@
 
             <div class="facility-card">
                 <div class="facility-image">
-                    School Campus Photo
-                </div>
+    <img src="images/school-campus.jpg" alt="School Campus">
+</div>
 
                 <h3>School Campus</h3>
 
