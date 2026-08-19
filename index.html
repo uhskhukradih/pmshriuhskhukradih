@@ -4,272 +4,589 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>PM SHRI UHS KHUKRADIH</title>
+<title>PM SHRI UHS Khukradih | Official School Website</title>
+
+<meta name="description" content="Official website of PM SHRI Upgraded Govt. High School, Khukradih, East Singhbhum, Jharkhand.">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+/* =========================
+   BASIC
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    color: #222;
-    background: #f5f7fb;
-    line-height: 1.6;
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.6;
+    color:#222;
+    background:#f5f7fb;
 }
 
-/* HEADER */
-header {
-    background: #0b3d91;
-    color: white;
-    padding: 15px 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+a{
+    text-decoration:none;
 }
 
-.logo h1 {
-    font-size: 22px;
+/* =========================
+   TOP BAR
+========================= */
+
+.top-bar{
+    background:#063b7a;
+    color:white;
+    padding:7px 6%;
+    display:flex;
+    justify-content:space-between;
+    font-size:13px;
 }
 
-.logo p {
-    font-size: 13px;
+.top-bar span{
+    margin-right:15px;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 18px;
+/* =========================
+   HEADER
+========================= */
+
+header{
+    background:white;
+    padding:15px 6%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.12);
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
+/* LOGO */
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:15px;
 }
 
-nav a:hover {
-    color: #ffd54f;
+.school-logo{
+    width:72px;
+    height:72px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#ff9933,#ffffff,#138808);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#063b7a;
+    font-size:13px;
+    font-weight:bold;
+    border:3px solid #063b7a;
+    flex-shrink:0;
 }
 
-/* HERO */
-.hero {
-    min-height: 560px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    padding: 50px 20px;
+.school-name h1{
+    color:#063b7a;
+    font-size:21px;
+    line-height:1.25;
+}
+
+.school-name h2{
+    color:#d88900;
+    font-size:15px;
+    margin-top:3px;
+}
+
+.school-name p{
+    font-size:12px;
+    color:#555;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav ul{
+    list-style:none;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:17px;
+}
+
+nav a{
+    color:#123;
+    font-weight:bold;
+    font-size:13px;
+}
+
+nav a:hover{
+    color:#e18b00;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:570px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding:70px 20px;
 
     background:
-    linear-gradient(rgba(0,45,110,.75),rgba(0,45,110,.75)),
-    linear-gradient(135deg,#1472b8,#52a8d8);
+    linear-gradient(rgba(0,48,105,.78),rgba(0,48,105,.78)),
+    linear-gradient(135deg,#1769aa,#4ca4d8);
 }
 
-.hero-content {
-    max-width: 900px;
+.hero-content{
+    max-width:950px;
 }
 
-.hero h2 {
-    font-size: 45px;
-    margin-bottom: 15px;
+.badge{
+    display:inline-block;
+    padding:8px 18px;
+    border-radius:25px;
+    background:rgba(255,255,255,.15);
+    border:1px solid rgba(255,255,255,.5);
+    margin-bottom:20px;
+    font-size:14px;
 }
 
-.hero h3 {
-    font-size: 24px;
-    margin-bottom: 25px;
+.hero h1{
+    font-size:43px;
+    line-height:1.2;
+    margin-bottom:15px;
 }
 
-.hero p {
-    font-size: 18px;
+.hero h2{
+    font-size:26px;
+    margin-bottom:25px;
+    font-weight:normal;
 }
 
-.btn {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 13px 28px;
-    background: #ffb300;
-    color: #111;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
+.hero p{
+    max-width:850px;
+    margin:auto;
+    font-size:17px;
 }
 
-/* SECTIONS */
-section {
-    padding: 70px 7%;
+.hero-buttons{
+    margin-top:30px;
 }
 
-.title {
-    text-align: center;
-    margin-bottom: 40px;
+.btn{
+    display:inline-block;
+    padding:12px 24px;
+    margin:5px;
+    border-radius:30px;
+    background:#ffb300;
+    color:#111;
+    font-weight:bold;
 }
 
-.title h2 {
-    color: #0b3d91;
-    font-size: 32px;
+.btn-outline{
+    background:transparent;
+    color:white;
+    border:2px solid white;
 }
 
-.title p {
-    color: #666;
+.btn:hover{
+    transform:translateY(-2px);
 }
 
-/* WELCOME */
-.welcome {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
+/* =========================
+   COMMON SECTIONS
+========================= */
+
+section{
+    padding:70px 7%;
 }
 
-.box {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 18px rgba(0,0,0,.08);
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
 }
 
-.box h3 {
-    color: #0b3d91;
-    margin-bottom: 15px;
+.section-title h2{
+    color:#063b7a;
+    font-size:31px;
 }
 
-/* QUICK LINKS */
-.quick-links {
-    background: #eef5ff;
+.section-title p{
+    color:#777;
+    margin-top:5px;
 }
 
-.cards {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 20px;
+/* =========================
+   WELCOME
+========================= */
+
+.welcome-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
 }
 
-.card {
-    background: white;
-    padding: 25px 15px;
-    text-align: center;
-    border-radius: 15px;
-    box-shadow: 0 5px 18px rgba(0,0,0,.08);
+.info-card{
+    background:white;
+    padding:32px;
+    border-radius:16px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
 }
 
-.card a {
-    text-decoration: none;
-    color: #0b3d91;
-    font-weight: bold;
+.info-card h3{
+    color:#063b7a;
+    margin-bottom:15px;
+    font-size:22px;
 }
 
-/* PRINCIPAL */
-.principal {
-    text-align: center;
-    max-width: 900px;
-    margin: auto;
+.info-card p{
+    margin-bottom:12px;
 }
 
-.principal-photo {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    background: #dbeafe;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto 20px;
-    color: #0b3d91;
-    font-weight: bold;
+/* =========================
+   HIGHLIGHTS
+========================= */
+
+.highlights{
+    background:#eef5ff;
 }
 
-.principal h3 {
-    color: #0b3d91;
-    font-size: 25px;
-    margin-bottom: 15px;
+.highlight-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
 }
 
-/* FOOTER */
-footer {
-    background: #06275e;
-    color: white;
-    text-align: center;
-    padding: 25px;
+.highlight-card{
+    background:white;
+    padding:28px 15px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.07);
+    transition:.3s;
 }
 
-footer p {
-    margin: 5px;
+.highlight-card:hover{
+    transform:translateY(-6px);
 }
 
-/* MOBILE */
-@media(max-width:900px) {
+.highlight-icon{
+    font-size:38px;
+    margin-bottom:12px;
+}
 
-    header {
-        flex-direction: column;
-        gap: 15px;
+.highlight-card h3{
+    color:#063b7a;
+    font-size:18px;
+}
+
+.highlight-card p{
+    font-size:13px;
+    color:#666;
+    margin-top:6px;
+}
+
+/* =========================
+   PRINCIPAL
+========================= */
+
+.principal-section{
+    background:white;
+}
+
+.principal-box{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    background:#f7faff;
+    padding:40px;
+    border-radius:18px;
+    border:1px solid #e0e8f5;
+}
+
+.principal-photo{
+    width:125px;
+    height:125px;
+    border-radius:50%;
+    background:#dbeafe;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:0 auto 20px;
+    color:#063b7a;
+    font-weight:bold;
+    border:4px solid white;
+    box-shadow:0 3px 12px rgba(0,0,0,.15);
+}
+
+.principal-box h3{
+    color:#063b7a;
+    font-size:25px;
+}
+
+.principal-box .designation{
+    color:#d88900;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+/* =========================
+   PM SHRI
+========================= */
+
+.pmshri{
+    background:linear-gradient(135deg,#fff7e6,#fff);
+}
+
+.pmshri-box{
+    max-width:950px;
+    margin:auto;
+    text-align:center;
+}
+
+.pmshri-box h2{
+    color:#063b7a;
+    margin-bottom:15px;
+}
+
+.pmshri-box p{
+    margin-bottom:12px;
+}
+
+/* =========================
+   QUICK LINKS
+========================= */
+
+.quick{
+    background:#063b7a;
+    color:white;
+}
+
+.quick .section-title h2,
+.quick .section-title p{
+    color:white;
+}
+
+.quick-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:15px;
+}
+
+.quick-card{
+    background:rgba(255,255,255,.1);
+    border:1px solid rgba(255,255,255,.2);
+    padding:20px 10px;
+    text-align:center;
+    border-radius:12px;
+}
+
+.quick-card a{
+    color:white;
+    font-weight:bold;
+}
+
+.quick-card:hover{
+    background:rgba(255,255,255,.2);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#032752;
+    color:white;
+    padding:35px 7% 20px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:30px;
+}
+
+footer h3{
+    margin-bottom:12px;
+}
+
+footer p,
+footer li{
+    font-size:14px;
+    color:#dbe7f5;
+}
+
+footer ul{
+    list-style:none;
+}
+
+footer li{
+    margin-bottom:6px;
+}
+
+.copyright{
+    border-top:1px solid rgba(255,255,255,.2);
+    margin-top:25px;
+    padding-top:15px;
+    text-align:center;
+    font-size:13px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:1050px){
+
+    header{
+        flex-direction:column;
     }
 
-    nav ul {
-        justify-content: center;
-        gap: 10px;
+    .highlight-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .hero h2 {
-        font-size: 32px;
+    .quick-grid{
+        grid-template-columns:repeat(3,1fr);
     }
 
-    .welcome {
-        grid-template-columns: 1fr;
-    }
-
-    .cards {
-        grid-template-columns: repeat(2,1fr);
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
     }
 }
 
-@media(max-width:600px) {
+@media(max-width:700px){
 
-    .hero h2 {
-        font-size: 27px;
+    .top-bar{
+        flex-direction:column;
+        text-align:center;
+        gap:4px;
     }
 
-    .hero h3 {
-        font-size: 19px;
+    .school-logo{
+        width:60px;
+        height:60px;
+        font-size:11px;
     }
 
-    .hero p {
-        font-size: 16px;
+    .school-name h1{
+        font-size:16px;
     }
 
-    .cards {
-        grid-template-columns: 1fr;
+    .school-name h2{
+        font-size:12px;
     }
 
-    section {
-        padding: 50px 5%;
+    nav ul{
+        gap:9px;
+    }
+
+    nav a{
+        font-size:12px;
+    }
+
+    .hero{
+        min-height:540px;
+    }
+
+    .hero h1{
+        font-size:28px;
+    }
+
+    .hero h2{
+        font-size:20px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .welcome-grid{
+        grid-template-columns:1fr;
+    }
+
+    .highlight-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .quick-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:55px 5%;
     }
 }
+
+@media(max-width:450px){
+
+    .highlight-grid,
+    .quick-grid{
+        grid-template-columns:1fr;
+    }
+}
+
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header>
 
-<div class="logo">
-    <h1>PM SHRI UHS KHUKRADIH</h1>
-    <p>East Singhbhum, Jharkhand</p>
+<!-- TOP BAR -->
+
+<div class="top-bar">
+
+<span>🇮🇳 Government of Jharkhand</span>
+
+<span>PM SHRI School • East Singhbhum</span>
+
 </div>
 
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo-area">
+
+<div class="school-logo">
+PM<br>
+SHRI<br>
+SCHOOL
+</div>
+
+<div class="school-name">
+
+<h1>PM SHRI UHS KHUKRADIH</h1>
+
+<h2>PM SHRI UPGRADED GOVT. HIGH SCHOOL</h2>
+
+<p>Khukradih, East Singhbhum, Jharkhand</p>
+
+</div>
+
+</div>
+
+
 <nav>
+
 <ul>
 
 <li><a href="index.html">Home</a></li>
@@ -293,27 +610,49 @@ footer p {
 <li><a href="contact.html">Contact</a></li>
 
 </ul>
+
 </nav>
 
 </header>
 
 
-<!-- HOME HERO -->
+<!-- HERO -->
+
 <section class="hero">
 
 <div class="hero-content">
 
-<h2>PM SHRI UPGRADED GOVT. HIGH SCHOOL KHUKRADIH</h2>
+<div class="badge">
+PM SHRI • Quality Education • Holistic Development
+</div>
 
-<h3>पीएम श्री उन्नत शासकीय उच्च विद्यालय, खुकरडीह</h3>
+<h1>
+Welcome to PM SHRI UHS Khukradih
+</h1>
+
+<h2>
+पीएम श्री उन्नत शासकीय उच्च विद्यालय, खुकरडीह
+</h2>
 
 <p>
-Welcome to PM SHRI Upgraded Govt. High School, Khukradih.
 As a proud part of the visionary PM SHRI scheme, our institution
-is dedicated to nurturing young minds with modern, high-quality education.
+is dedicated to nurturing young minds with modern, high-quality
+education. We blend academic excellence with smart digital
+classrooms, sports facilities, and holistic skill-development
+programs to prepare our students for a bright future.
 </p>
 
-<a href="about.html" class="btn">Explore Our School</a>
+<div class="hero-buttons">
+
+<a href="about.html" class="btn">
+About School
+</a>
+
+<a href="gallery.html" class="btn btn-outline">
+View Gallery
+</a>
+
+</div>
 
 </div>
 
@@ -321,109 +660,130 @@ is dedicated to nurturing young minds with modern, high-quality education.
 
 
 <!-- WELCOME -->
+
 <section>
 
-<div class="title">
+<div class="section-title">
 
-<h2>Welcome to Our School</h2>
+<h2>About Our School</h2>
 
-<p>हमारे विद्यालय में आपका स्वागत है</p>
+<p>हमारे विद्यालय के बारे में</p>
 
 </div>
 
-<div class="welcome">
 
-<div class="box">
+<div class="welcome-grid">
 
-<h3>About Our School</h3>
+
+<div class="info-card">
+
+<h3>Welcome to Our School</h3>
 
 <p>
-PM SHRI Upgraded Govt. High School, Khukradih is committed to
-providing modern and high-quality education to students.
+Welcome to PM SHRI Upgraded Govt. High School, Khukradih.
+As a proud part of the visionary PM SHRI scheme, our institution
+is dedicated to nurturing young minds with modern, high-quality
+education.
 </p>
 
-<p style="margin-top:15px;">
+<p>
 We blend academic excellence with smart digital classrooms,
-sports facilities and holistic skill-development programs
+sports facilities, and holistic skill-development programs
 to prepare our students for a bright future.
 </p>
 
 </div>
 
 
-<div class="box">
+<div class="info-card">
 
-<h3>विद्यालय के बारे में</h3>
+<h3>विद्यालय में आपका स्वागत है</h3>
+
+<p>
+पीएम श्री उन्नत शासकीय उच्च विद्यालय, खुकरडीह की आधिकारिक
+वेबसाइट पर आपका स्वागत है।
+</p>
 
 <p>
 पीएम श्री योजना के अंतर्गत अपग्रेड किया गया यह विद्यालय
-आधुनिक और उच्च गुणवत्तापूर्ण शिक्षा प्रदान करने के लिए प्रतिबद्ध है।
+आधुनिक और उच्च गुणवत्तापूर्ण शिक्षा प्रदान करने के लिए
+प्रतिबद्ध है।
 </p>
 
-<p style="margin-top:15px;">
-स्मार्ट क्लासरूम, खेल-कूद की सुविधाओं और कौशल विकास कार्यक्रमों
-के माध्यम से विद्यार्थियों के सर्वांगीण विकास पर विशेष ध्यान दिया जाता है।
+<p>
+हमारे यहाँ स्मार्ट क्लासरूम, खेल-कूद की सुविधाएँ और कौशल
+विकास कार्यक्रमों के माध्यम से विद्यार्थियों का सर्वांगीण
+विकास किया जाता है, ताकि वे एक सुनहरे भविष्य का निर्माण
+कर सकें।
 </p>
 
 </div>
+
 
 </div>
 
 </section>
 
 
-<!-- QUICK LINKS -->
-<section class="quick-links">
+<!-- HIGHLIGHTS -->
 
-<div class="title">
+<section class="highlights">
 
-<h2>Explore Our School</h2>
+<div class="section-title">
 
-<p>विद्यालय के विभिन्न अनुभाग</p>
+<h2>School Highlights</h2>
+
+<p>विद्यालय की प्रमुख विशेषताएँ</p>
 
 </div>
 
-<div class="cards">
 
-<div class="card">
-<h3>🏫</h3>
-<a href="about.html">About School</a>
+<div class="highlight-grid">
+
+
+<div class="highlight-card">
+
+<div class="highlight-icon">📚</div>
+
+<h3>Quality Education</h3>
+
+<p>गुणवत्तापूर्ण शिक्षा</p>
+
 </div>
 
-<div class="card">
-<h3>📚</h3>
-<a href="academics.html">Academics</a>
+
+<div class="highlight-card">
+
+<div class="highlight-icon">💻</div>
+
+<h3>Smart Learning</h3>
+
+<p>स्मार्ट डिजिटल कक्षाएँ</p>
+
 </div>
 
-<div class="card">
-<h3>👨‍🏫</h3>
-<a href="staff.html">Teachers & Staff</a>
+
+<div class="highlight-card">
+
+<div class="highlight-icon">⚽</div>
+
+<h3>Sports</h3>
+
+<p>खेल एवं शारीरिक विकास</p>
+
 </div>
 
-<div class="card">
-<h3>🏆</h3>
-<a href="facilities.html">Facilities</a>
+
+<div class="highlight-card">
+
+<div class="highlight-icon">🌱</div>
+
+<h3>Holistic Development</h3>
+
+<p>सर्वांगीण विकास</p>
+
 </div>
 
-<div class="card">
-<h3>📷</h3>
-<a href="gallery.html">Gallery</a>
-</div>
-
-<div class="card">
-<h3>📢</h3>
-<a href="notices.html">Notice Board</a>
-</div>
-
-<div class="card">
-<h3>🎉</h3>
-<a href="events.html">Events</a>
-</div>
-
-<div class="card">
-<h3>📝</h3>
-<a href="admission.html">Admission</a>
-</div>
 
 </div>
 
@@ -431,9 +791,10 @@ to prepare our students for a bright future.
 
 
 <!-- PRINCIPAL -->
-<section>
 
-<div class="title">
+<section class="principal-section">
+
+<div class="section-title">
 
 <h2>Principal's Message</h2>
 
@@ -441,21 +802,33 @@ to prepare our students for a bright future.
 
 </div>
 
-<div class="principal">
+
+<div class="principal-box">
 
 <div class="principal-photo">
-Principal Photo
+Principal<br>
+Photo
 </div>
 
 <h3>Arun Kumar</h3>
 
-<p><strong>Principal</strong></p>
+<div class="designation">
+Principal • प्रधानाचार्य
+</div>
 
-<p style="margin-top:20px;">
+<p>
 Welcome to PM SHRI Upgraded Govt. High School, Khukradih.
 Our aim is to provide every student with quality education,
 opportunities to explore their talents and an environment
 where they can grow with confidence.
+</p>
+
+<p style="margin-top:15px;">
+
+हमारा उद्देश्य प्रत्येक विद्यार्थी को गुणवत्तापूर्ण शिक्षा,
+अपनी प्रतिभा को विकसित करने के अवसर और ऐसा वातावरण प्रदान
+करना है जहाँ वे आत्मविश्वास के साथ आगे बढ़ सकें।
+
 </p>
 
 </div>
@@ -463,12 +836,115 @@ where they can grow with confidence.
 </section>
 
 
-<!-- FOOTER -->
-<footer>
+<!-- PM SHRI -->
+
+<section class="pmshri">
+
+<div class="section-title">
+
+<h2>PM SHRI School</h2>
+
+<p>पीएम श्री विद्यालय</p>
+
+</div>
+
+
+<div class="pmshri-box">
 
 <p>
-© 2026 PM SHRI UHS KHUKRADIH
+PM SHRI Schools aim to develop exemplary schools that
+showcase the implementation of the National Education Policy
+and provide high-quality education in an inclusive and
+joyful learning environment.
 </p>
+
+<p>
+पीएम श्री विद्यालयों का उद्देश्य राष्ट्रीय शिक्षा नीति के
+अनुरूप उत्कृष्ट विद्यालयों का विकास करना और विद्यार्थियों
+को समावेशी, आनंदमय एवं गुणवत्तापूर्ण शिक्षा प्रदान करना है।
+</p>
+
+</div>
+
+</section>
+
+
+<!-- QUICK LINKS -->
+
+<section class="quick">
+
+<div class="section-title">
+
+<h2>Explore Our School</h2>
+
+<p>विद्यालय के विभिन्न अनुभाग</p>
+
+</div>
+
+
+<div class="quick-grid">
+
+
+<div class="quick-card">
+<a href="about.html">🏫<br>About School<br>विद्यालय के बारे में</a>
+</div>
+
+
+<div class="quick-card">
+<a href="academics.html">📚<br>Academics<br>शैक्षणिक</a>
+</div>
+
+
+<div class="quick-card">
+<a href="staff.html">👨‍🏫<br>Staff<br>शिक्षक एवं कर्मचारी</a>
+</div>
+
+
+<div class="quick-card">
+<a href="facilities.html">🏆<br>Facilities<br>सुविधाएँ</a>
+</div>
+
+
+<div class="quick-card">
+<a href="gallery.html">📷<br>Gallery<br>फोटो गैलरी</a>
+</div>
+
+
+<div class="quick-card">
+<a href="notices.html">📢<br>Notice Board<br>सूचना पट्ट</a>
+</div>
+
+
+<div class="quick-card">
+<a href="events.html">🎉<br>Events<br>कार्यक्रम</a>
+</div>
+
+
+<div class="quick-card">
+<a href="admission.html">📝<br>Admission<br>प्रवेश</a>
+</div>
+
+
+<div class="quick-card">
+<a href="contact.html">📞<br>Contact<br>संपर्क</a>
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-grid">
+
+
+<div>
+
+<h3>PM SHRI UHS KHUKRADIH</h3>
 
 <p>
 PM SHRI Upgraded Govt. High School, Khukradih
@@ -478,7 +954,50 @@ PM SHRI Upgraded Govt. High School, Khukradih
 Jamshedpur, East Singhbhum, Jharkhand
 </p>
 
+</div>
+
+
+<div>
+
+<h3>Quick Links</h3>
+
+<ul>
+
+<li>About School</li>
+<li>Academics</li>
+<li>Staff</li>
+<li>Gallery</li>
+<li>Notice Board</li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h3>Contact</h3>
+
+<p>📍 Khukradih</p>
+
+<p>East Singhbhum, Jharkhand</p>
+
+<p>🇮🇳 India</p>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 PM SHRI UHS KHUKRADIH • Official School Website
+
+</div>
+
 </footer>
+
 
 </body>
 </html>
