@@ -1,1 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Gallery | PM SHRI UHS Khukradih</title>
+
+<meta name="description" content="Photo Gallery of PM SHRI UHS Khukradih, East Singhbhum, Jharkhand.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f7fb;
+    color:#222;
+    line-height:1.6;
+}
+
+/* =========================
+   TOP BAR
+========================= */
+
+.top-bar{
+    background:#063b7a;
+    color:white;
+    padding:7px 6%;
+    display:flex;
+    justify-content:space-between;
+    font-size:13px;
+}
+
+.top-bar span{
+    margin-right:15px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    background:white;
+    padding:15px 6%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    box-shadow:0 2px 10px rgba(0,0,0,.12);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.school-logo{
+    width:72px;
+    height:72px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#ff9933,#ffffff,#138808);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#063b7a;
+    font-size:13px;
+    font-weight:bold;
+    border:3px solid #063b7a;
+    flex-shrink:0;
+}
+
+.school-name h1{
+    color:#063b7a;
+    font-size:21px;
+    line-height:1.25;
+}
+
+.school-name h2{
+    color:#d88900;
+    font-size:15px;
+    margin-top:3px;
+}
+
+.school-name p{
+    font-size:12px;
+    color:#555;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav ul{
+    list-style:none;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:17px;
+}
+
+nav a{
+    color:#123;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:13px;
+}
+
+nav a:hover{
+    color:#e18b00;
+}
+
+/* =========================
+   PAGE TITLE
+========================= */
+
+.page-title{
+    background:linear-gradient(rgba(0,48,105,.82),rgba(0,48,105,.82));
+    color:white;
+    text-align:center;
+    padding:75px 20px;
+}
+
+.page-title h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.page-title p{
+    font-size:18px;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-section{
+    padding:65px 7%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    color:#063b7a;
+    font-size:30px;
+}
+
+.section-title p{
+    color:#777;
+    margin-top:5px;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.gallery-card{
+    background:white;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 5px 18px rgba(0,0,0,.10);
+    transition:.3s;
+}
+
+.gallery-card:hover{
+    transform:translateY(-5px);
+}
+
+.gallery-image{
+    width:100%;
+    height:230px;
+    background:#eaf1fb;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.gallery-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:.3s;
+}
+
+.gallery-image:hover img{
+    transform:scale(1.05);
+}
+
+.gallery-caption{
+    padding:15px;
+    text-align:center;
+}
+
+.gallery-caption h3{
+    color:#063b7a;
+    font-size:18px;
+}
+
+.gallery-caption p{
+    color:#777;
+    font-size:13px;
+}
+
+/* =========================
+   IMAGE ZOOM
+========================= */
+
+.image-modal{
+    display:none;
+    position:fixed;
+    z-index:9999;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.90);
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+}
+
+.image-modal img{
+    max-width:95%;
+    max-height:90%;
+    object-fit:contain;
+    border-radius:8px;
+    box-shadow:0 5px 30px rgba(0,0,0,.5);
+}
+
+.close-button{
+    position:absolute;
+    top:20px;
+    right:30px;
+    color:white;
+    font-size:42px;
+    font-weight:bold;
+    cursor:pointer;
+    line-height:1;
+}
+
+.close-button:hover{
+    color:#ffb300;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#032752;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+    margin-top:20px;
+}
+
+footer p{
+    color:#dbe7f5;
+    font-size:14px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:1050px){
+
+    header{
+        flex-direction:column;
+    }
+
+    .gallery-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+    .top-bar{
+        flex-direction:column;
+        text-align:center;
+        gap:4px;
+    }
+
+    .school-logo{
+        width:60px;
+        height:60px;
+        font-size:11px;
+    }
+
+    .school-name h1{
+        font-size:16px;
+    }
+
+    .school-name h2{
+        font-size:12px;
+    }
+
+    nav ul{
+        gap:9px;
+    }
+
+    nav a{
+        font-size:12px;
+    }
+
+    .page-title{
+        padding:55px 20px;
+    }
+
+    .page-title h1{
+        font-size:30px;
+    }
+
+    .page-title p{
+        font-size:15px;
+    }
+
+    .gallery-section{
+        padding:50px 5%;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-image{
+        height:240px;
+    }
+
+    .image-modal{
+        padding:15px;
+    }
+
+    .image-modal img{
+        max-width:100%;
+        max-height:85%;
+    }
+
+    .close-button{
+        top:15px;
+        right:20px;
+        font-size:38px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+
+<div class="top-bar">
+
+<span>🇮🇳 Government of Jharkhand</span>
+
+<span>PM SHRI School • East Singhbhum</span>
+
+</div>
+
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo-area">
+
+<div class="school-logo">
+PM<br>
+SHRI<br>
+SCHOOL
+</div>
+
+<div class="school-name">
+
+<h1>PM SHRI UHS KHUKRADIH</h1>
+
+<h2>PM SHRI UPGRADED GOVT. HIGH SCHOOL</h2>
+
+<p>Khukradih, East Singhbhum, Jharkhand</p>
+
+</div>
+
+</div>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About School</a></li>
+
+<li><a href="academics.html">Academics</a></li>
+
+<li><a href="staff.html">Staff</a></li>
+
+<li><a href="facilities.html">Facilities</a></li>
+
+<li><a href="gallery.html">Gallery</a></li>
+
+<li><a href="notices.html">Notice Board</a></li>
+
+<li><a href="events.html">Events</a></li>
+
+<li><a href="admission.html">Admission</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+<!-- PAGE TITLE -->
+
+<section class="page-title">
+
+<h1>School Gallery</h1>
+
+<p>विद्यालय की फोटो गैलरी</p>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section class="gallery-section">
+
+<div class="section-title">
+
+<h2>Our School</h2>
+
+<p>विद्यालय परिसर एवं भवन</p>
+
+</div>
+
+
+<div class="gallery-grid">
+
+
+<!-- PHOTO 1 -->
+
+<div class="gallery-card">
+
+<div class="gallery-image"
+onclick="openImage('images/gallery-campus-1.jpeg')">
+
+<img src="images/gallery-campus-1.jpeg"
+alt="School Campus">
+
+</div>
+
+<div class="gallery-caption">
+
+<h3>School Campus</h3>
+
+<p>विद्यालय परिसर</p>
+
+</div>
+
+</div>
+
+
+<!-- PHOTO 2 -->
+
+<div class="gallery-card">
+
+<div class="gallery-image"
+onclick="openImage('images/gallery-campus-2.jpeg')">
+
+<img src="images/gallery-campus-2.jpeg"
+alt="School Building">
+
+</div>
+
+<div class="gallery-caption">
+
+<h3>School Building</h3>
+
+<p>विद्यालय भवन</p>
+
+</div>
+
+</div>
+
+
+<!-- PHOTO 3 -->
+
+<div class="gallery-card">
+
+<div class="gallery-image"
+onclick="openImage('images/gallery-classroom-1.jpeg')">
+
+<img src="images/gallery-classroom-1.jpeg"
+alt="Classroom">
+
+</div>
+
+<div class="gallery-caption">
+
+<h3>Classroom</h3>
+
+<p>कक्षा कक्ष</p>
+
+</div>
+
+</div>
+
+
+<!-- PHOTO 4 -->
+
+<div class="gallery-card">
+
+<div class="gallery-image"
+onclick="openImage('images/gallery-classroom-2.jpeg')">
+
+<img src="images/gallery-classroom-2.jpeg"
+alt="Smart Classroom">
+
+</div>
+
+<div class="gallery-caption">
+
+<h3>Smart Classroom</h3>
+
+<p>स्मार्ट कक्षा</p>
+
+</div>
+
+</div>
+
+
+<!-- PHOTO 5 -->
+
+<div class="gallery-card">
+
+<div class="gallery-image"
+onclick="openImage('images/gallery-event-1.jpeg')">
+
+<img src="images/gallery-event-1.jpeg"
+alt="School Event">
+
+</div>
+
+<div class="gallery-caption">
+
+<h3>School Event</h3>
+
+<p>विद्यालय कार्यक्रम</p>
+
+</div>
+
+</div>
+
+
+<!-- PHOTO 6 -->
+
+<div class="gallery-card">
+
+<div class="gallery-image"
+onclick="openImage('images/gallery-event-2.jpeg')">
+
+<img src="images/gallery-event-2.jpeg"
+alt="School Activity">
+
+</div>
+
+<div class="gallery-caption">
+
+<h3>School Activity</h3>
+
+<p>विद्यालय गतिविधि</p>
+
+</div>
+
+</div>
+
+
+<!-- PHOTO 7 -->
+
+<div class="gallery-card">
+
+<div class="gallery-image"
+onclick="openImage('images/gallery-sports-1.jpeg')">
+
+<img src="images/gallery-sports-1.jpeg"
+alt="Sports">
+
+</div>
+
+<div class="gallery-caption">
+
+<h3>Sports</h3>
+
+<p>खेल गतिविधियाँ</p>
+
+</div>
+
+</div>
+
+
+<!-- PHOTO 8 -->
+
+<div class="gallery-card">
+
+<div class="gallery-image"
+onclick="openImage('images/gallery-sports-2.jpeg')">
+
+<img src="images/gallery-sports-2.jpeg"
+alt="Sports Activity">
+
+</div>
+
+<div class="gallery-caption">
+
+<h3>Sports Activity</h3>
+
+<p>खेलकूद गतिविधि</p>
+
+</div>
+
+</div>
+
+
+<!-- PHOTO 9 -->
+
+<div class="gallery-card">
+
+<div class="gallery-image"
+onclick="openImage('images/gallery-campus-3.jpeg')">
+
+<img src="images/gallery-campus-3.jpeg"
+alt="School Campus">
+
+</div>
+
+<div class="gallery-caption">
+
+<h3>School Campus</h3>
+
+<p>विद्यालय परिसर</p>
+
+</div>
+
+</div>
+
+
+<!-- PHOTO 10 -->
+
+<div class="gallery-card">
+
+<div class="gallery-image"
+onclick="openImage('images/gallery-activity-1.jpeg')">
+
+<img src="images/gallery-activity-1.jpeg"
+alt="School Activity">
+
+</div>
+
+<div class="gallery-caption">
+
+<h3>School Activity</h3>
+
+<p>विद्यालय गतिविधि</p>
+
+</div>
+
+</div>
+
+
+<!-- PHOTO 11 -->
+
+<div class="gallery-card">
+
+<div class="gallery-image"
+onclick="openImage('images/gallery-activity-2.jpeg')">
+
+<img src="images/gallery-activity-2.jpeg"
+alt="Student Activity">
+
+</div>
+
+<div class="gallery-caption">
+
+<h3>Student Activity</h3>
+
+<p>विद्यार्थी गतिविधि</p>
+
+</div>
+
+</div>
+
+
+<!-- PHOTO 12 -->
+
+<div class="gallery-card">
+
+<div class="gallery-image"
+onclick="openImage('images/gallery-event-3.jpeg')">
+
+<img src="images/gallery-event-3.jpeg"
+alt="School Event">
+
+</div>
+
+<div class="gallery-caption">
+
+<h3>School Event</h3>
+
+<p>विद्यालय कार्यक्रम</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- IMAGE ZOOM WINDOW -->
+
+<div class="image-modal"
+id="imageModal"
+onclick="closeImage(event)">
+
+<span class="close-button"
+onclick="closeImage()">×</span>
+
+<img id="zoomedImage"
+src=""
+alt="Zoomed Image">
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>© 2026 PM SHRI UHS Khukradih. All Rights Reserved.</p>
+
+</footer>
+
+
+<!-- IMAGE ZOOM SCRIPT -->
+
+<script>
+
+function openImage(imagePath){
+
+    document.getElementById("imageModal").style.display = "flex";
+
+    document.getElementById("zoomedImage").src = imagePath;
+
+}
+
+function closeImage(event){
+
+    if(event && event.target.id !== "imageModal"){
+        return;
+    }
+
+    document.getElementById("imageModal").style.display = "none";
+
+    document.getElementById("zoomedImage").src = "";
+
+}
+
+</script>
+
+
+</body>
+</html>
