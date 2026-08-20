@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admission | PM SHRI UHS Khukradih</title>
+
+<meta name="description" content="Admission information of PM SHRI UHS Khukradih, East Singhbhum, Jharkhand.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.6;
+    color:#222;
+    background:#f5f7fb;
+}
+
+a{
+    text-decoration:none;
+}
+
+
+/* =========================
+   TOP BAR
+========================= */
+
+.top-bar{
+    background:#063b7a;
+    color:white;
+    padding:7px 6%;
+    display:flex;
+    justify-content:space-between;
+    font-size:13px;
+}
+
+.top-bar span{
+    margin-right:15px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    background:white;
+    padding:15px 6%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    box-shadow:0 2px 10px rgba(0,0,0,.12);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+
+/* LOGO */
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.school-logo{
+    width:72px;
+    height:72px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    border:3px solid #063b7a;
+    flex-shrink:0;
+}
+
+.school-logo img{
+    width:110%;
+    height:110%;
+    object-fit:cover;
+    border-radius:50%;
+    display:block;
+}
+
+.school-name h1{
+    color:#063b7a;
+    font-size:21px;
+    line-height:1.25;
+}
+
+.school-name h2{
+    color:#d88900;
+    font-size:15px;
+    margin-top:3px;
+}
+
+.school-name p{
+    font-size:12px;
+    color:#555;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav ul{
+    list-style:none;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:17px;
+}
+
+nav a{
+    color:#123;
+    font-weight:bold;
+    font-size:13px;
+}
+
+nav a:hover{
+    color:#e18b00;
+}
+
+
+/* =========================
+   PAGE TITLE
+========================= */
+
+.page-title{
+    background:
+    linear-gradient(rgba(0,48,105,.82),rgba(0,48,105,.82)),
+    linear-gradient(135deg,#1769aa,#4ca4d8);
+
+    color:white;
+    text-align:center;
+    padding:65px 20px;
+}
+
+.page-title h1{
+    font-size:42px;
+    margin-bottom:8px;
+}
+
+.page-title p{
+    font-size:18px;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.admission-section{
+    padding:65px 7%;
+}
+
+.admission-container{
+    max-width:1000px;
+    margin:auto;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro-box{
+    background:white;
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.intro-box h2{
+    color:#063b7a;
+    margin-bottom:10px;
+}
+
+.intro-box p{
+    color:#555;
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.admission-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.admission-card{
+    background:white;
+    padding:28px;
+    border-radius:16px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+.admission-card h2{
+    color:#063b7a;
+    font-size:22px;
+    margin-bottom:18px;
+}
+
+.admission-card ul,
+.admission-card ol{
+    padding-left:22px;
+}
+
+.admission-card li{
+    margin-bottom:10px;
+    color:#555;
+}
+
+
+/* =========================
+   IMPORTANT
+========================= */
+
+.important-box{
+    margin-top:30px;
+    background:#fff7e6;
+    border-left:5px solid #d88900;
+    padding:25px;
+    border-radius:12px;
+}
+
+.important-box h2{
+    color:#063b7a;
+    margin-bottom:8px;
+}
+
+.important-box p{
+    color:#555;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-box{
+    margin-top:30px;
+    background:#eef5ff;
+    padding:30px;
+    border-radius:16px;
+    text-align:center;
+}
+
+.contact-box h2{
+    color:#063b7a;
+    margin-bottom:15px;
+}
+
+.contact-box p{
+    margin-bottom:6px;
+    color:#555;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#032752;
+    color:white;
+    padding:35px 7% 20px;
+    text-align:center;
+}
+
+footer p{
+    color:#dbe7f5;
+    font-size:14px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:1050px){
+
+    header{
+        flex-direction:column;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+    .top-bar{
+        flex-direction:column;
+        text-align:center;
+        gap:4px;
+    }
+
+    .school-logo{
+        width:60px;
+        height:60px;
+    }
+
+    .school-name h1{
+        font-size:16px;
+    }
+
+    .school-name h2{
+        font-size:12px;
+    }
+
+    nav ul{
+        gap:9px;
+    }
+
+    nav a{
+        font-size:12px;
+    }
+
+    .page-title{
+        padding:50px 20px;
+    }
+
+    .page-title h1{
+        font-size:30px;
+    }
+
+    .page-title p{
+        font-size:15px;
+    }
+
+    .admission-section{
+        padding:50px 5%;
+    }
+
+    .admission-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- TOP BAR -->
+
+<div class="top-bar">
+
+<span>🇮🇳 Government of Jharkhand</span>
+
+<span>PM SHRI School • East Singhbhum</span>
+
+</div>
+
+
+<!-- HEADER -->
+
+<header>
+
+
+<div class="logo-area">
+
+<div class="school-logo">
+
+<img src="logo.png"
+alt="PM SHRI UHS Khukradih Logo">
+
+</div>
+
+
+<div class="school-name">
+
+<h1>PM SHRI UHS KHUKRADIH</h1>
+
+<h2>PM SHRI UPGRADED GOVT. HIGH SCHOOL</h2>
+
+<p>Khukradih, East Singhbhum, Jharkhand</p>
+
+</div>
+
+</div>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<ul>
+
+<li>
+<a href="index.html">Home</a>
+</li>
+
+<li>
+<a href="about.html">About School</a>
+</li>
+
+<li>
+<a href="academics.html">Academics</a>
+</li>
+
+<li>
+<a href="staff.html">Staff</a>
+</li>
+
+<li>
+<a href="facilities.html">Facilities</a>
+</li>
+
+<li>
+<a href="gallery.html">Gallery</a>
+</li>
+
+<li>
+<a href="notices.html">Notice Board</a>
+</li>
+
+<li>
+<a href="events.html">Events</a>
+</li>
+
+<li>
+<a href="admission.html">Admission</a>
+</li>
+
+<li>
+<a href="contact.html">Contact</a>
+</li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+<!-- PAGE TITLE -->
+
+<section class="page-title">
+
+<h1 id="pageTitle">
+Admission Information
+</h1>
+
+<p id="hindiTitle">
+प्रवेश संबंधी जानकारी
+</p>
+
+</section>
+
+
+<!-- ADMISSION -->
+
+<section class="admission-section">
+
+<div class="admission-container">
+
+
+<!-- INTRO -->
+
+<div class="intro-box">
+
+<h2>Admission</h2>
+
+<p id="intro">
+Loading...
+</p>
+
+</div>
+
+
+<!-- TWO CARDS -->
+
+<div class="admission-grid">
+
+
+<!-- ELIGIBILITY -->
+
+<div class="admission-card">
+
+<h2>🎓 Eligibility</h2>
+
+<ul id="eligibilityList">
+
+<li>Loading...</li>
+
+</ul>
+
+</div>
+
+
+<!-- DOCUMENTS -->
+
+<div class="admission-card">
+
+<h2>📄 Required Documents</h2>
+
+<ul id="documentsList">
+
+<li>Loading...</li>
+
+</ul>
+
+</div>
+
+
+<!-- PROCESS -->
+
+<div class="admission-card">
+
+<h2>📝 Admission Process</h2>
+
+<ol id="processList">
+
+<li>Loading...</li>
+
+</ol>
+
+</div>
+
+
+<!-- IMPORTANT -->
+
+<div class="admission-card">
+
+<h2>📢 Important Information</h2>
+
+<p id="important">
+Loading...
+</p>
+
+</div>
+
+
+</div>
+
+
+<!-- CONTACT -->
+
+<div class="contact-box">
+
+<h2>📞 Contact for Admission</h2>
+
+<p id="schoolName">
+Loading...
+</p>
+
+<p id="location">
+Loading...
+</p>
+
+<p id="phone">
+Loading...
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 PM SHRI UHS Khukradih. All Rights Reserved.
+</p>
+
+</footer>
+
+
+<script>
+
+/* =========================
+   GITHUB DETAILS
+========================= */
+
+const OWNER = "uhskhukradih";
+
+const REPO = "pmshriuhskhukradih";
+
+
+/* =========================
+   LOAD ADMISSION DATA
+========================= */
+
+async function loadAdmission(){
+
+    try{
+
+        const url =
+        `https://api.github.com/repos/${OWNER}/${REPO}/contents/admission.json`;
+
+        const response =
+        await fetch(url);
+
+        if(!response.ok){
+
+            throw new Error(
+                "admission.json not found"
+            );
+
+        }
+
+        const file =
+        await response.json();
+
+
+        /* Decode GitHub content */
+
+        const decoded =
+        atob(
+            file.content.replace(/\n/g,"")
+        );
+
+
+        const text =
+        decodeURIComponent(
+            Array.prototype.map.call(
+                decoded,
+                function(c){
+
+                    return '%'
+                    +
+                    ('00'+
+                    c.charCodeAt(0)
+                    .toString(16))
+                    .slice(-2);
+
+                }
+            ).join('')
+        );
+
+
+        const data =
+        JSON.parse(text);
+
+
+        /* Basic information */
+
+        document.getElementById(
+            "pageTitle"
+        ).textContent =
+        data.title;
+
+
+        document.getElementById(
+            "hindiTitle"
+        ).textContent =
+        data.hindiTitle;
+
+
+        document.getElementById(
+            "intro"
+        ).textContent =
+        data.intro;
+
+
+        document.getElementById(
+            "important"
+        ).textContent =
+        data.important;
+
+
+        /* Eligibility */
+
+        const eligibility =
+        document.getElementById(
+            "eligibilityList"
+        );
+
+        eligibility.innerHTML = "";
+
+        data.eligibility.forEach(
+            function(item){
+
+                const li =
+                document.createElement("li");
+
+                li.textContent = item;
+
+                eligibility.appendChild(li);
+
+            }
+        );
+
+
+        /* Documents */
+
+        const documents =
+        document.getElementById(
+            "documentsList"
+        );
+
+        documents.innerHTML = "";
+
+        data.documents.forEach(
+            function(item){
+
+                const li =
+                document.createElement("li");
+
+                li.textContent = item;
+
+                documents.appendChild(li);
+
+            }
+        );
+
+
+        /* Admission Process */
+
+        const process =
+        document.getElementById(
+            "processList"
+        );
+
+        process.innerHTML = "";
+
+        data.process.forEach(
+            function(item){
+
+                const li =
+                document.createElement("li");
+
+                li.textContent = item;
+
+                process.appendChild(li);
+
+            }
+        );
+
+
+        /* Contact */
+
+        document.getElementById(
+            "schoolName"
+        ).textContent =
+        data.contact.school;
+
+
+        document.getElementById(
+            "location"
+        ).textContent =
+        data.contact.location;
+
+
+        document.getElementById(
+            "phone"
+        ).textContent =
+        data.contact.phone;
+
+
+    }
+
+    catch(error){
+
+        document.getElementById(
+            "intro"
+        ).textContent =
+        "Admission information अभी उपलब्ध नहीं है।";
+
+    }
+
+}
+
+
+/* START */
+
+loadAdmission();
+
+</script>
+
+
+</body>
+
+</html>
