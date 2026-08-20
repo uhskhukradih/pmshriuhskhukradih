@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Gallery | PM SHRI UHS Khukradih</title>
@@ -9,6 +12,10 @@
 <meta name="description" content="Photo Gallery of PM SHRI UHS Khukradih, East Singhbhum, Jharkhand.">
 
 <style>
+
+/* =========================
+   BASIC
+========================= */
 
 *{
     margin:0;
@@ -22,10 +29,15 @@ html{
 
 body{
     font-family:Arial, Helvetica, sans-serif;
-    background:#f5f7fb;
-    color:#222;
     line-height:1.6;
+    color:#222;
+    background:#f5f7fb;
 }
+
+a{
+    text-decoration:none;
+}
+
 
 /* =========================
    TOP BAR
@@ -44,6 +56,7 @@ body{
     margin-right:15px;
 }
 
+
 /* =========================
    HEADER
 ========================= */
@@ -55,11 +68,14 @@ header{
     align-items:center;
     justify-content:space-between;
     gap:20px;
-    box-shadow:0 2px 10px rgba(0,0,0,.12);
+    box-shadow:0 2px 10px rgba(0,0,0,0.12);
     position:sticky;
     top:0;
     z-index:1000;
 }
+
+
+/* LOGO */
 
 .logo-area{
     display:flex;
@@ -100,6 +116,7 @@ header{
     color:#555;
 }
 
+
 /* =========================
    NAVIGATION
 ========================= */
@@ -114,7 +131,6 @@ nav ul{
 
 nav a{
     color:#123;
-    text-decoration:none;
     font-weight:bold;
     font-size:13px;
 }
@@ -123,15 +139,19 @@ nav a:hover{
     color:#e18b00;
 }
 
+
 /* =========================
    PAGE TITLE
 ========================= */
 
 .page-title{
-    background:linear-gradient(rgba(0,48,105,.82),rgba(0,48,105,.82));
+    background:
+    linear-gradient(rgba(0,48,105,.82),rgba(0,48,105,.82)),
+    linear-gradient(135deg,#1769aa,#4ca4d8);
+
     color:white;
     text-align:center;
-    padding:75px 20px;
+    padding:70px 20px;
 }
 
 .page-title h1{
@@ -143,8 +163,9 @@ nav a:hover{
     font-size:18px;
 }
 
+
 /* =========================
-   GALLERY
+   GALLERY SECTION
 ========================= */
 
 .gallery-section{
@@ -158,7 +179,7 @@ nav a:hover{
 
 .section-title h2{
     color:#063b7a;
-    font-size:30px;
+    font-size:31px;
 }
 
 .section-title p{
@@ -166,61 +187,104 @@ nav a:hover{
     margin-top:5px;
 }
 
-.gallery-grid{
+
+/* =========================
+   CATEGORY
+========================= */
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:20px;
+}
+
+.category-card{
+    background:white;
+    padding:30px 15px;
+    text-align:center;
+    border-radius:16px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    cursor:pointer;
+    transition:.3s;
+    border:2px solid transparent;
+}
+
+.category-card:hover{
+    transform:translateY(-6px);
+    border-color:#063b7a;
+}
+
+.category-icon{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.category-card h3{
+    color:#063b7a;
+    font-size:18px;
+}
+
+.category-card p{
+    color:#777;
+    font-size:13px;
+    margin-top:5px;
+}
+
+
+/* =========================
+   PHOTO AREA
+========================= */
+
+.photo-area{
+    margin-top:55px;
+}
+
+.photo-title{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.photo-title h2{
+    color:#063b7a;
+}
+
+.photo-title p{
+    color:#777;
+}
+
+.photo-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:25px;
 }
 
-.gallery-card{
+.photo-card{
     background:white;
-    border-radius:16px;
+    border-radius:15px;
     overflow:hidden;
     box-shadow:0 5px 18px rgba(0,0,0,.10);
+    cursor:pointer;
     transition:.3s;
 }
 
-.gallery-card:hover{
+.photo-card:hover{
     transform:translateY(-5px);
 }
 
-.gallery-image{
+.photo-card img{
     width:100%;
     height:230px;
-    background:#eaf1fb;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    overflow:hidden;
-    cursor:pointer;
-}
-
-.gallery-image img{
-    width:100%;
-    height:100%;
     object-fit:cover;
     display:block;
-    transition:.3s;
 }
 
-.gallery-image:hover img{
-    transform:scale(1.05);
-}
-
-.gallery-caption{
-    padding:15px;
+.photo-card .caption{
+    padding:12px;
     text-align:center;
-}
-
-.gallery-caption h3{
     color:#063b7a;
-    font-size:18px;
+    font-weight:bold;
 }
 
-.gallery-caption p{
-    color:#777;
-    font-size:13px;
-}
 
 /* =========================
    IMAGE ZOOM
@@ -234,10 +298,12 @@ nav a:hover{
     top:0;
     width:100%;
     height:100%;
-    background:rgba(0,0,0,.90);
+    background:rgba(0,0,0,.92);
+
     justify-content:center;
     align-items:center;
-    padding:30px;
+
+    padding:20px;
 }
 
 .image-modal img{
@@ -245,23 +311,20 @@ nav a:hover{
     max-height:90%;
     object-fit:contain;
     border-radius:8px;
-    box-shadow:0 5px 30px rgba(0,0,0,.5);
 }
 
 .close-button{
     position:absolute;
-    top:20px;
-    right:30px;
+    top:15px;
+    right:25px;
+
     color:white;
-    font-size:42px;
+    font-size:45px;
     font-weight:bold;
+
     cursor:pointer;
-    line-height:1;
 }
 
-.close-button:hover{
-    color:#ffb300;
-}
 
 /* =========================
    FOOTER
@@ -270,15 +333,15 @@ nav a:hover{
 footer{
     background:#032752;
     color:white;
+    padding:35px 7% 20px;
     text-align:center;
-    padding:30px 20px;
-    margin-top:20px;
 }
 
 footer p{
     color:#dbe7f5;
     font-size:14px;
 }
+
 
 /* =========================
    TABLET
@@ -290,10 +353,15 @@ footer p{
         flex-direction:column;
     }
 
-    .gallery-grid{
+    .category-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .photo-grid{
         grid-template-columns:repeat(2,1fr);
     }
 }
+
 
 /* =========================
    MOBILE
@@ -345,34 +413,39 @@ footer p{
         padding:50px 5%;
     }
 
-    .gallery-grid{
+    .category-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .photo-grid{
         grid-template-columns:1fr;
     }
 
-    .gallery-image{
+    .photo-card img{
         height:240px;
-    }
-
-    .image-modal{
-        padding:15px;
-    }
-
-    .image-modal img{
-        max-width:100%;
-        max-height:85%;
-    }
-
-    .close-button{
-        top:15px;
-        right:20px;
-        font-size:38px;
     }
 }
 
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media(max-width:450px){
+
+    .category-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
 </style>
+
 </head>
 
+
 <body>
+
 
 <!-- TOP BAR -->
 
@@ -392,10 +465,13 @@ footer p{
 <div class="logo-area">
 
 <div class="school-logo">
+
 PM<br>
 SHRI<br>
 SCHOOL
+
 </div>
+
 
 <div class="school-name">
 
@@ -458,77 +534,37 @@ SCHOOL
 
 <section class="gallery-section">
 
+
 <div class="section-title">
 
-<h2>Our School</h2>
+<h2>Explore Our Gallery</h2>
 
-<p>विद्यालय परिसर एवं भवन</p>
-
-</div>
-
-
-<div class="gallery-grid">
-
-
-<!-- PHOTO 1 -->
-
-<div class="gallery-card">
-
-<div class="gallery-image"
-onclick="openImage('images/gallery-campus-1.jpeg')">
-
-<img src="images/gallery-campus-1.jpeg"
-alt="School Campus">
+<p>किसी भी श्रेणी पर क्लिक करके तस्वीरें देखें</p>
 
 </div>
 
-<div class="gallery-caption">
 
-<h3>School Campus</h3>
+<!-- CATEGORY BUTTONS -->
+
+<div class="category-grid">
+
+
+<div class="category-card"
+onclick="loadGallery('campus','School Campus','विद्यालय परिसर')">
+
+<div class="category-icon">🏫</div>
+
+<h3>Campus</h3>
 
 <p>विद्यालय परिसर</p>
 
 </div>
 
-</div>
 
+<div class="category-card"
+onclick="loadGallery('classroom','Classrooms','कक्षा कक्ष')">
 
-<!-- PHOTO 2 -->
-
-<div class="gallery-card">
-
-<div class="gallery-image"
-onclick="openImage('images/gallery-campus-2.jpeg')">
-
-<img src="images/gallery-campus-2.jpeg"
-alt="School Building">
-
-</div>
-
-<div class="gallery-caption">
-
-<h3>School Building</h3>
-
-<p>विद्यालय भवन</p>
-
-</div>
-
-</div>
-
-
-<!-- PHOTO 3 -->
-
-<div class="gallery-card">
-
-<div class="gallery-image"
-onclick="openImage('images/gallery-classroom-1.jpeg')">
-
-<img src="images/gallery-classroom-1.jpeg"
-alt="Classroom">
-
-</div>
-
-<div class="gallery-caption">
+<div class="category-icon">📚</div>
 
 <h3>Classroom</h3>
 
@@ -536,91 +572,23 @@ alt="Classroom">
 
 </div>
 
-</div>
 
+<div class="category-card"
+onclick="loadGallery('activities','Activities','विद्यालय गतिविधियाँ')">
 
-<!-- PHOTO 4 -->
+<div class="category-icon">🌱</div>
 
-<div class="gallery-card">
+<h3>Activities</h3>
 
-<div class="gallery-image"
-onclick="openImage('images/gallery-classroom-2.jpeg')">
-
-<img src="images/gallery-classroom-2.jpeg"
-alt="Smart Classroom">
-
-</div>
-
-<div class="gallery-caption">
-
-<h3>Smart Classroom</h3>
-
-<p>स्मार्ट कक्षा</p>
-
-</div>
+<p>विद्यालय गतिविधियाँ</p>
 
 </div>
 
 
-<!-- PHOTO 5 -->
+<div class="category-card"
+onclick="loadGallery('sports','Sports','खेल गतिविधियाँ')">
 
-<div class="gallery-card">
-
-<div class="gallery-image"
-onclick="openImage('images/gallery-event-1.jpeg')">
-
-<img src="images/gallery-event-1.jpeg"
-alt="School Event">
-
-</div>
-
-<div class="gallery-caption">
-
-<h3>School Event</h3>
-
-<p>विद्यालय कार्यक्रम</p>
-
-</div>
-
-</div>
-
-
-<!-- PHOTO 6 -->
-
-<div class="gallery-card">
-
-<div class="gallery-image"
-onclick="openImage('images/gallery-event-2.jpeg')">
-
-<img src="images/gallery-event-2.jpeg"
-alt="School Activity">
-
-</div>
-
-<div class="gallery-caption">
-
-<h3>School Activity</h3>
-
-<p>विद्यालय गतिविधि</p>
-
-</div>
-
-</div>
-
-
-<!-- PHOTO 7 -->
-
-<div class="gallery-card">
-
-<div class="gallery-image"
-onclick="openImage('images/gallery-sports-1.jpeg')">
-
-<img src="images/gallery-sports-1.jpeg"
-alt="Sports">
-
-</div>
-
-<div class="gallery-caption">
+<div class="category-icon">⚽</div>
 
 <h3>Sports</h3>
 
@@ -628,130 +596,41 @@ alt="Sports">
 
 </div>
 
-</div>
 
+<div class="category-card"
+onclick="loadGallery('events','Events','विद्यालय कार्यक्रम')">
 
-<!-- PHOTO 8 -->
+<div class="category-icon">🎉</div>
 
-<div class="gallery-card">
-
-<div class="gallery-image"
-onclick="openImage('images/gallery-sports-2.jpeg')">
-
-<img src="images/gallery-sports-2.jpeg"
-alt="Sports Activity">
-
-</div>
-
-<div class="gallery-caption">
-
-<h3>Sports Activity</h3>
-
-<p>खेलकूद गतिविधि</p>
-
-</div>
-
-</div>
-
-
-<!-- PHOTO 9 -->
-
-<div class="gallery-card">
-
-<div class="gallery-image"
-onclick="openImage('images/gallery-campus-3.jpeg')">
-
-<img src="images/gallery-campus-3.jpeg"
-alt="School Campus">
-
-</div>
-
-<div class="gallery-caption">
-
-<h3>School Campus</h3>
-
-<p>विद्यालय परिसर</p>
-
-</div>
-
-</div>
-
-
-<!-- PHOTO 10 -->
-
-<div class="gallery-card">
-
-<div class="gallery-image"
-onclick="openImage('images/gallery-activity-1.jpeg')">
-
-<img src="images/gallery-activity-1.jpeg"
-alt="School Activity">
-
-</div>
-
-<div class="gallery-caption">
-
-<h3>School Activity</h3>
-
-<p>विद्यालय गतिविधि</p>
-
-</div>
-
-</div>
-
-
-<!-- PHOTO 11 -->
-
-<div class="gallery-card">
-
-<div class="gallery-image"
-onclick="openImage('images/gallery-activity-2.jpeg')">
-
-<img src="images/gallery-activity-2.jpeg"
-alt="Student Activity">
-
-</div>
-
-<div class="gallery-caption">
-
-<h3>Student Activity</h3>
-
-<p>विद्यार्थी गतिविधि</p>
-
-</div>
-
-</div>
-
-
-<!-- PHOTO 12 -->
-
-<div class="gallery-card">
-
-<div class="gallery-image"
-onclick="openImage('images/gallery-event-3.jpeg')">
-
-<img src="images/gallery-event-3.jpeg"
-alt="School Event">
-
-</div>
-
-<div class="gallery-caption">
-
-<h3>School Event</h3>
+<h3>Events</h3>
 
 <p>विद्यालय कार्यक्रम</p>
 
 </div>
 
+
 </div>
 
 
+<!-- PHOTO AREA -->
+
+<div class="photo-area" id="photoArea">
+
+<div class="photo-title">
+
+<h2>Select a Category</h2>
+
+<p>ऊपर किसी category पर क्लिक करें</p>
+
 </div>
+
+</div>
+
 
 </section>
 
 
-<!-- IMAGE ZOOM WINDOW -->
+<!-- IMAGE ZOOM -->
 
 <div class="image-modal"
 id="imageModal"
@@ -762,7 +641,7 @@ onclick="closeImage()">×</span>
 
 <img id="zoomedImage"
 src=""
-alt="Zoomed Image">
+alt="Gallery Image">
 
 </div>
 
@@ -771,32 +650,228 @@ alt="Zoomed Image">
 
 <footer>
 
-<p>© 2026 PM SHRI UHS Khukradih. All Rights Reserved.</p>
+<p>
+© 2026 PM SHRI UHS Khukradih. All Rights Reserved.
+</p>
 
 </footer>
 
 
-<!-- IMAGE ZOOM SCRIPT -->
-
 <script>
 
-function openImage(imagePath){
+/* =========================
+   YOUR GITHUB DETAILS
+========================= */
 
-    document.getElementById("imageModal").style.display = "flex";
+const OWNER = "uhskhukradih";
 
-    document.getElementById("zoomedImage").src = imagePath;
+const REPO = "pmshriuhskhukradih";
+
+
+/* =========================
+   LOAD GALLERY
+========================= */
+
+async function loadGallery(folder,title,hindiTitle){
+
+    const photoArea =
+    document.getElementById("photoArea");
+
+
+    photoArea.innerHTML = `
+
+        <div class="photo-title">
+
+            <h2>${title}</h2>
+
+            <p>${hindiTitle}</p>
+
+        </div>
+
+        <div class="photo-grid"
+        id="photoGrid">
+
+            <p style="
+            grid-column:1/-1;
+            text-align:center;
+            ">
+
+            Loading photos...
+
+            </p>
+
+        </div>
+
+    `;
+
+
+    const apiURL =
+    `https://api.github.com/repos/${OWNER}/${REPO}/contents/images/${folder}`;
+
+
+    try{
+
+        const response =
+        await fetch(apiURL);
+
+
+        if(!response.ok){
+
+            throw new Error("Folder not found");
+
+        }
+
+
+        const files =
+        await response.json();
+
+
+        const photos =
+        files.filter(file => {
+
+            return file.type === "file" &&
+            file.name
+            .toLowerCase()
+            .endsWith(".jpeg");
+
+        });
+
+
+        const photoGrid =
+        document.getElementById("photoGrid");
+
+
+        if(photos.length === 0){
+
+            photoGrid.innerHTML = `
+
+                <p style="
+                grid-column:1/-1;
+                text-align:center;
+                color:#777;
+                ">
+
+                अभी इस category में कोई photo उपलब्ध नहीं है।
+
+                </p>
+
+            `;
+
+            return;
+
+        }
+
+
+        photoGrid.innerHTML = "";
+
+
+        photos.forEach(photo => {
+
+
+            const card =
+            document.createElement("div");
+
+
+            card.className =
+            "photo-card";
+
+
+            card.onclick =
+            function(){
+
+                openImage(
+                photo.download_url
+                );
+
+            };
+
+
+            card.innerHTML = `
+
+                <img
+                src="${photo.download_url}"
+                alt="${title}">
+
+                <div class="caption">
+                ${photo.name}
+                </div>
+
+            `;
+
+
+            photoGrid.appendChild(card);
+
+
+        });
+
+
+    }
+
+    catch(error){
+
+        photoArea.innerHTML = `
+
+            <div class="photo-title">
+
+                <h2>${title}</h2>
+
+                <p>${hindiTitle}</p>
+
+                <p style="
+                color:#d00000;
+                margin-top:15px;
+                ">
+
+                Photos load नहीं हो पाईं।
+                कृपया GitHub folders check करें।
+
+                </p>
+
+            </div>
+
+        `;
+
+    }
 
 }
 
+
+/* =========================
+   IMAGE ZOOM
+========================= */
+
+function openImage(imagePath){
+
+    document.getElementById(
+    "imageModal"
+    ).style.display="flex";
+
+
+    document.getElementById(
+    "zoomedImage"
+    ).src=imagePath;
+
+}
+
+
 function closeImage(event){
 
-    if(event && event.target.id !== "imageModal"){
+    if(event &&
+    event.target.id !== "imageModal"){
+
         return;
+
     }
 
-    document.getElementById("imageModal").style.display = "none";
 
-    document.getElementById("zoomedImage").src = "";
+    document.getElementById(
+    "imageModal"
+    ).style.display="none";
+
+
+    document.getElementById(
+    "zoomedImage"
+    ).src="";
 
 }
 
@@ -804,4 +879,5 @@ function closeImage(event){
 
 
 </body>
+
 </html>
