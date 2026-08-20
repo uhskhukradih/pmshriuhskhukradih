@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Notice Board | PM SHRI UHS Khukradih</title>
+
+<meta name="description" content="Official Notice Board of PM SHRI UHS Khukradih, East Singhbhum, Jharkhand.">
+
+<style>
+
+/* =========================
+   BASIC
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.6;
+    color:#222;
+    background:#f5f7fb;
+}
+
+a{
+    text-decoration:none;
+}
+
+
+/* =========================
+   TOP BAR
+========================= */
+
+.top-bar{
+    background:#063b7a;
+    color:white;
+    padding:7px 6%;
+    display:flex;
+    justify-content:space-between;
+    font-size:13px;
+}
+
+.top-bar span{
+    margin-right:15px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    background:white;
+    padding:15px 6%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.12);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.school-logo{
+    width:72px;
+    height:72px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    border:3px solid #063b7a;
+    flex-shrink:0;
+}
+
+.school-logo img{
+    width:110%;
+    height:110%;
+    object-fit:cover;
+    border-radius:50%;
+    display:block;
+}
+
+.school-name h1{
+    color:#063b7a;
+    font-size:21px;
+    line-height:1.25;
+}
+
+.school-name h2{
+    color:#d88900;
+    font-size:15px;
+    margin-top:3px;
+}
+
+.school-name p{
+    font-size:12px;
+    color:#555;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav ul{
+    list-style:none;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:17px;
+}
+
+nav a{
+    color:#123;
+    font-weight:bold;
+    font-size:13px;
+}
+
+nav a:hover{
+    color:#e18b00;
+}
+
+
+/* =========================
+   PAGE TITLE
+========================= */
+
+.page-title{
+    background:
+    linear-gradient(rgba(0,48,105,.82),rgba(0,48,105,.82)),
+    linear-gradient(135deg,#1769aa,#4ca4d8);
+
+    color:white;
+    text-align:center;
+    padding:65px 20px;
+}
+
+.page-title h1{
+    font-size:42px;
+    margin-bottom:8px;
+}
+
+.page-title p{
+    font-size:18px;
+}
+
+
+/* =========================
+   NOTICE SECTION
+========================= */
+
+.notice-section{
+    padding:65px 7%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    color:#063b7a;
+    font-size:31px;
+}
+
+.section-title p{
+    color:#777;
+    margin-top:5px;
+}
+
+
+/* =========================
+   NOTICE CONTAINER
+========================= */
+
+.notice-container{
+    max-width:950px;
+    margin:auto;
+}
+
+
+/* =========================
+   NOTICE CARD
+========================= */
+
+.notice-card{
+    background:white;
+    margin-bottom:20px;
+    padding:25px;
+    border-radius:15px;
+    border-left:5px solid #063b7a;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.notice-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 22px rgba(0,0,0,.12);
+}
+
+
+/* =========================
+   NOTICE HEADER
+========================= */
+
+.notice-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+    margin-bottom:10px;
+}
+
+.notice-date{
+    color:#777;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.new-badge{
+    background:#e53935;
+    color:white;
+    padding:4px 10px;
+    border-radius:15px;
+    font-size:11px;
+    font-weight:bold;
+}
+
+
+/* =========================
+   NOTICE TITLE
+========================= */
+
+.notice-card h3{
+    color:#063b7a;
+    font-size:21px;
+    margin-bottom:10px;
+}
+
+.notice-card p{
+    color:#444;
+    font-size:15px;
+}
+
+
+/* =========================
+   NO NOTICE
+========================= */
+
+.no-notice{
+    background:white;
+    padding:40px;
+    text-align:center;
+    border-radius:15px;
+    color:#777;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#032752;
+    color:white;
+    padding:35px 7% 20px;
+    text-align:center;
+}
+
+footer p{
+    color:#dbe7f5;
+    font-size:14px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:1050px){
+
+    header{
+        flex-direction:column;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+    .top-bar{
+        flex-direction:column;
+        text-align:center;
+        gap:4px;
+    }
+
+    .school-logo{
+        width:60px;
+        height:60px;
+    }
+
+    .school-name h1{
+        font-size:16px;
+    }
+
+    .school-name h2{
+        font-size:12px;
+    }
+
+    nav ul{
+        gap:9px;
+    }
+
+    nav a{
+        font-size:12px;
+    }
+
+    .page-title{
+        padding:50px 20px;
+    }
+
+    .page-title h1{
+        font-size:30px;
+    }
+
+    .page-title p{
+        font-size:15px;
+    }
+
+    .notice-section{
+        padding:50px 5%;
+    }
+
+    .notice-header{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- TOP BAR -->
+
+<div class="top-bar">
+
+<span>🇮🇳 Government of Jharkhand</span>
+
+<span>PM SHRI School • East Singhbhum</span>
+
+</div>
+
+
+<!-- HEADER -->
+
+<header>
+
+
+<div class="logo-area">
+
+
+<div class="school-logo">
+
+<img src="logo.png"
+alt="PM SHRI UHS Khukradih Logo">
+
+</div>
+
+
+<div class="school-name">
+
+<h1>PM SHRI UHS KHUKRADIH</h1>
+
+<h2>PM SHRI UPGRADED GOVT. HIGH SCHOOL</h2>
+
+<p>Khukradih, East Singhbhum, Jharkhand</p>
+
+</div>
+
+
+</div>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<ul>
+
+<li>
+<a href="index.html">Home</a>
+</li>
+
+<li>
+<a href="about.html">About School</a>
+</li>
+
+<li>
+<a href="academics.html">Academics</a>
+</li>
+
+<li>
+<a href="staff.html">Staff</a>
+</li>
+
+<li>
+<a href="facilities.html">Facilities</a>
+</li>
+
+<li>
+<a href="gallery.html">Gallery</a>
+</li>
+
+<li>
+<a href="notices.html">Notice Board</a>
+</li>
+
+<li>
+<a href="events.html">Events</a>
+</li>
+
+<li>
+<a href="admission.html">Admission</a>
+</li>
+
+<li>
+<a href="contact.html">Contact</a>
+</li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+<!-- PAGE TITLE -->
+
+<section class="page-title">
+
+<h1>Notice Board</h1>
+
+<p>विद्यालय सूचना पट्ट</p>
+
+</section>
+
+
+<!-- NOTICE SECTION -->
+
+<section class="notice-section">
+
+
+<div class="section-title">
+
+<h2>Latest Notices</h2>
+
+<p>विद्यालय की महत्वपूर्ण सूचनाएँ</p>
+
+</div>
+
+
+<div class="notice-container"
+id="noticeContainer">
+
+<div class="no-notice">
+
+Loading notices...
+
+</div>
+
+</div>
+
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 PM SHRI UHS Khukradih. All Rights Reserved.
+</p>
+
+</footer>
+
+
+<script>
+
+
+/* =========================
+   GITHUB REPOSITORY
+========================= */
+
+const OWNER = "uhskhukradih";
+
+const REPO = "pmshriuhskhukradih";
+
+
+/* =========================
+   LOAD NOTICES
+========================= */
+
+async function loadNotices(){
+
+    const container =
+    document.getElementById(
+        "noticeContainer"
+    );
+
+
+    try{
+
+        const url =
+        `https://api.github.com/repos/${OWNER}/${REPO}/contents/notices.json`;
+
+
+        const response =
+        await fetch(url);
+
+
+        if(!response.ok){
+
+            throw new Error(
+                "Notice file not found"
+            );
+
+        }
+
+
+        const file =
+        await response.json();
+
+
+        /* Decode GitHub file */
+
+        const decoded =
+        atob(
+            file.content.replace(/\n/g,"")
+        );
+
+
+        const text =
+        decodeURIComponent(
+            Array.prototype.map.call(
+                decoded,
+                function(c){
+
+                    return '%'
+                    +
+                    ('00'+
+                    c.charCodeAt(0)
+                    .toString(16))
+                    .slice(-2);
+
+                }
+            ).join('')
+        );
+
+
+        const notices =
+        JSON.parse(text);
+
+
+        container.innerHTML = "";
+
+
+        if(
+            !notices ||
+            notices.length === 0
+        ){
+
+            container.innerHTML = `
+
+                <div class="no-notice">
+
+                    अभी कोई notice उपलब्ध नहीं है।
+
+                </div>
+
+            `;
+
+            return;
+
+        }
+
+
+        /* Show newest notices first */
+
+        notices.reverse();
+
+
+        notices.forEach(
+            function(notice,index){
+
+                const card =
+                document.createElement(
+                    "div"
+                );
+
+
+                card.className =
+                "notice-card";
+
+
+                card.innerHTML = `
+
+                    <div class="notice-header">
+
+                        <div class="notice-date">
+
+                            📅 ${notice.date}
+
+                        </div>
+
+                        ${
+                            index === 0
+                            ?
+                            '<div class="new-badge">NEW</div>'
+                            :
+                            ''
+                        }
+
+                    </div>
+
+
+                    <h3>
+
+                        ${notice.title}
+
+                    </h3>
+
+
+                    <p>
+
+                        ${notice.message}
+
+                    </p>
+
+                `;
+
+
+                container.appendChild(
+                    card
+                );
+
+            }
+        );
+
+
+    }
+
+    catch(error){
+
+        container.innerHTML = `
+
+            <div class="no-notice">
+
+                Notice load नहीं हो पाए।<br><br>
+
+                कृपया बाद में फिर कोशिश करें।
+
+            </div>
+
+        `;
+
+    }
+
+}
+
+
+/* Load notices */
+
+loadNotices();
+
+</script>
+
+
+</body>
+
+</html>
