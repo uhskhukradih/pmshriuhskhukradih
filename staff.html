@@ -1,0 +1,910 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Staff | PM SHRI UHS Khukradih</title>
+
+<meta name="description"
+content="Teaching and staff information of PM SHRI UHS Khukradih, East Singhbhum, Jharkhand.">
+
+
+<style>
+
+/* =========================
+   BASIC
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.6;
+    color:#222;
+    background:#f5f7fb;
+}
+
+a{
+    text-decoration:none;
+}
+
+
+/* =========================
+   TOP BAR
+========================= */
+
+.top-bar{
+    background:#063b7a;
+    color:white;
+    padding:7px 6%;
+    display:flex;
+    justify-content:space-between;
+    font-size:13px;
+}
+
+.top-bar span{
+    margin-right:15px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    background:white;
+    padding:15px 6%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+
+    box-shadow:
+    0 2px 10px rgba(0,0,0,0.12);
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.school-logo{
+    width:72px;
+    height:72px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#ff9933,#ffffff,#138808);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#063b7a;
+    font-size:13px;
+    font-weight:bold;
+    border:3px solid #063b7a;
+    flex-shrink:0;
+}
+
+.school-logo img{
+    width:110%;
+    height:110%;
+    object-fit:cover;
+    border-radius:50%;
+}
+
+.school-name h1{
+    color:#063b7a;
+    font-size:21px;
+    line-height:1.25;
+}
+
+.school-name h2{
+    color:#d88900;
+    font-size:15px;
+    margin-top:3px;
+}
+
+.school-name p{
+    font-size:12px;
+    color:#555;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav ul{
+    list-style:none;
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:17px;
+}
+
+nav a{
+    color:#123;
+
+    font-weight:bold;
+
+    font-size:13px;
+}
+
+nav a:hover{
+    color:#e18b00;
+}
+
+
+/* =========================
+   PAGE TITLE
+========================= */
+
+.page-title{
+
+    background:
+    linear-gradient(
+        rgba(0,48,105,.82),
+        rgba(0,48,105,.82)
+    ),
+    linear-gradient(
+        135deg,
+        #1769aa,
+        #4ca4d8
+    );
+
+    color:white;
+
+    text-align:center;
+
+    padding:65px 20px;
+}
+
+.page-title h1{
+    font-size:42px;
+
+    margin-bottom:8px;
+}
+
+.page-title p{
+    font-size:18px;
+}
+
+
+/* =========================
+   STAFF SECTION
+========================= */
+
+.staff-section{
+    padding:65px 7%;
+}
+
+.section-title{
+    text-align:center;
+
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    color:#063b7a;
+
+    font-size:31px;
+}
+
+.section-title p{
+    color:#777;
+
+    margin-top:5px;
+}
+
+
+/* =========================
+   STAFF GRID
+========================= */
+
+.staff-grid{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:25px;
+}
+
+
+/* =========================
+   STAFF CARD
+========================= */
+
+.staff-card{
+
+    background:white;
+
+    padding:25px 18px;
+
+    border-radius:16px;
+
+    text-align:center;
+
+    box-shadow:
+    0 5px 18px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.staff-card:hover{
+
+    transform:
+    translateY(-5px);
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,.12);
+}
+
+
+/* =========================
+   STAFF PHOTO
+========================= */
+
+.staff-photo{
+
+    width:140px;
+    height:140px;
+
+    margin:
+    0 auto 18px;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    border:4px solid white;
+
+    box-shadow:
+    0 3px 12px rgba(0,0,0,.15);
+
+    background:#dbeafe;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#063b7a;
+
+    font-weight:bold;
+}
+
+.staff-photo img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+
+/* =========================
+   STAFF NAME
+========================= */
+
+.staff-card h3{
+
+    color:#063b7a;
+
+    font-size:20px;
+
+    margin-bottom:5px;
+}
+
+.staff-designation{
+
+    color:#d88900;
+
+    font-weight:bold;
+
+    font-size:14px;
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.no-staff{
+
+    grid-column:1 / -1;
+
+    max-width:700px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:40px;
+
+    text-align:center;
+
+    border-radius:16px;
+
+    color:#777;
+
+    box-shadow:
+    0 5px 18px rgba(0,0,0,.08);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    background:#032752;
+
+    color:white;
+
+    padding:35px 7% 20px;
+
+    text-align:center;
+}
+
+footer p{
+
+    color:#dbe7f5;
+
+    font-size:14px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:1050px){
+
+    header{
+        flex-direction:column;
+    }
+
+    .staff-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+    .top-bar{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        gap:4px;
+    }
+
+    .school-logo{
+
+        width:60px;
+        height:60px;
+    }
+
+    .school-name h1{
+
+        font-size:16px;
+    }
+
+    .school-name h2{
+
+        font-size:12px;
+    }
+
+    nav ul{
+
+        gap:9px;
+    }
+
+    nav a{
+
+        font-size:12px;
+    }
+
+    .page-title{
+
+        padding:50px 20px;
+    }
+
+    .page-title h1{
+
+        font-size:30px;
+    }
+
+    .page-title p{
+
+        font-size:15px;
+    }
+
+    .staff-section{
+
+        padding:50px 5%;
+    }
+
+    .staff-grid{
+
+        grid-template-columns:
+        1fr 1fr;
+
+        gap:15px;
+    }
+
+    .staff-card{
+
+        padding:20px 10px;
+    }
+
+    .staff-photo{
+
+        width:110px;
+        height:110px;
+    }
+
+    .staff-card h3{
+
+        font-size:17px;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media(max-width:450px){
+
+    .staff-grid{
+
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- TOP BAR -->
+
+<div class="top-bar">
+
+<span>
+🇮🇳 Government of Jharkhand
+</span>
+
+<span>
+PM SHRI School • East Singhbhum
+</span>
+
+</div>
+
+
+<!-- HEADER -->
+
+<header>
+
+
+<div class="logo-area">
+
+
+<div class="school-logo">
+
+<img
+src="logo.png"
+alt="PM SHRI UHS Khukradih Logo">
+
+</div>
+
+
+<div class="school-name">
+
+<h1>
+PM SHRI UHS KHUKRADIH
+</h1>
+
+<h2>
+PM SHRI UPGRADED GOVT. HIGH SCHOOL
+</h2>
+
+<p>
+Khukradih, East Singhbhum, Jharkhand
+</p>
+
+</div>
+
+</div>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<ul>
+
+<li>
+<a href="index.html">
+Home
+</a>
+</li>
+
+<li>
+<a href="about.html">
+About School
+</a>
+</li>
+
+<li>
+<a href="academics.html">
+Academics
+</a>
+</li>
+
+<li>
+<a href="staff.html">
+Staff
+</a>
+</li>
+
+<li>
+<a href="facilities.html">
+Facilities
+</a>
+</li>
+
+<li>
+<a href="gallery.html">
+Gallery
+</a>
+</li>
+
+<li>
+<a href="notices.html">
+Notice Board
+</a>
+</li>
+
+<li>
+<a href="events.html">
+Events
+</a>
+</li>
+
+<li>
+<a href="admission.html">
+Admission
+</a>
+</li>
+
+<li>
+<a href="contact.html">
+Contact
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+<!-- PAGE TITLE -->
+
+<section class="page-title">
+
+<h1>
+Our Staff
+</h1>
+
+<p>
+शिक्षक एवं कर्मचारी
+</p>
+
+</section>
+
+
+<!-- STAFF SECTION -->
+
+<section class="staff-section">
+
+
+<div class="section-title">
+
+<h2>
+Teaching & Staff Members
+</h2>
+
+<p>
+हमारे विद्यालय के शिक्षक एवं कर्मचारी
+</p>
+
+</div>
+
+
+<div
+class="staff-grid"
+id="staffGrid">
+
+<div class="no-staff">
+
+Staff information loading...
+
+</div>
+
+</div>
+
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 PM SHRI UHS Khukradih.
+All Rights Reserved.
+</p>
+
+</footer>
+
+
+<script>
+
+
+/* =========================
+   GITHUB REPOSITORY
+========================= */
+
+const OWNER =
+"uhskhukradih";
+
+const REPO =
+"pmshriuhskhukradih";
+
+
+/* =========================
+   LOAD STAFF DATA
+========================= */
+
+async function loadStaff(){
+
+    const grid =
+    document.getElementById(
+        "staffGrid"
+    );
+
+
+    try{
+
+        const url =
+        `https://api.github.com/repos/${OWNER}/${REPO}/contents/staff.json`;
+
+
+        const response =
+        await fetch(url);
+
+
+        if(!response.ok){
+
+            throw new Error(
+                "staff.json not found"
+            );
+
+        }
+
+
+        const file =
+        await response.json();
+
+
+        /* Decode GitHub JSON */
+
+        const decoded =
+        atob(
+            file.content.replace(/\n/g,"")
+        );
+
+
+        const text =
+        decodeURIComponent(
+
+            Array.prototype.map.call(
+
+                decoded,
+
+                function(c){
+
+                    return "%"
+
+                    +
+
+                    (
+                        "00"
+                        +
+                        c.charCodeAt(0)
+                        .toString(16)
+                    )
+                    .slice(-2);
+
+                }
+
+            ).join("")
+
+        );
+
+
+        const staff =
+        JSON.parse(text);
+
+
+        grid.innerHTML = "";
+
+
+        if(
+            !staff ||
+            staff.length === 0
+        ){
+
+            grid.innerHTML = `
+
+                <div class="no-staff">
+
+                    Staff information
+                    अभी उपलब्ध नहीं है।
+
+                </div>
+
+            `;
+
+            return;
+
+        }
+
+
+        /* Create cards */
+
+        staff.forEach(
+
+            function(member){
+
+                const card =
+                document.createElement(
+                    "div"
+                );
+
+
+                card.className =
+                "staff-card";
+
+
+                card.innerHTML = `
+
+                    <div class="staff-photo">
+
+                        <img
+
+                        src="${member.photo}"
+
+                        alt="${member.name}"
+
+                        loading="lazy"
+
+                        >
+
+                    </div>
+
+
+                    <h3>
+
+                        ${member.name}
+
+                    </h3>
+
+
+                    <div
+                    class="staff-designation">
+
+                        ${member.designation}
+
+                    </div>
+
+                `;
+
+
+                grid.appendChild(
+                    card
+                );
+
+            }
+
+        );
+
+
+    }
+
+    catch(error){
+
+        grid.innerHTML = `
+
+            <div class="no-staff">
+
+                Staff information
+                अभी उपलब्ध नहीं है।
+
+            </div>
+
+        `;
+
+    }
+
+}
+
+
+/* =========================
+   START
+========================= */
+
+loadStaff();
+
+
+</script>
+
+
+</body>
+
+</html>
