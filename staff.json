@@ -3,5 +3,11 @@
     "name": "Arun Kumar",
     "designation": "Principal • प्रधानाचार्य",
     "photo": "images/principal.jpeg"
+  },
+
+    {
+    "name": "Teacher 2",
+    "designation": "Teacher • शिक्षक",
+    "photo": "images/staff/teacher2.jpeg"
   }
 ]
