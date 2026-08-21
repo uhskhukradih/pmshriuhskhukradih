@@ -1,332 +1,998 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Campus & Facilities | PM SHRI UHS Khukradih</title>
+<meta charset="UTF-8">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f7fa;
-            color: #333;
-            line-height: 1.6;
-        }
+<title>Facilities | PM SHRI UHS Khukradih</title>
 
-        header {
-            background: #0b4f8a;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+<meta name="description"
+content="Facilities of PM SHRI UHS Khukradih, East Singhbhum, Jharkhand.">
 
-        header h1 {
-            font-size: 28px;
-            margin-bottom: 5px;
-        }
 
-        header p {
-            font-size: 16px;
-        }
+<style>
 
-        nav {
-            background: #083b66;
-            text-align: center;
-            padding: 12px;
-        }
+/* =========================
+   BASIC
+========================= */
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 12px;
-            font-size: 15px;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+html{
+    scroll-behavior:smooth;
+}
 
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.45),
-                        rgba(0, 0, 0, 0.45)),
-                        url("images/school-campus.jpg");
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.6;
+    color:#222;
+    background:#f5f7fb;
+}
 
-            background-size: cover;
-            background-position: center;
-            height: 280px;
+a{
+    text-decoration:none;
+}
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
 
-            color: white;
-            text-align: center;
-        }
+/* =========================
+   TOP BAR
+========================= */
 
-        .hero h2 {
-            font-size: 38px;
-        }
+.top-bar{
+    background:#063b7a;
+    color:white;
+    padding:7px 6%;
+    display:flex;
+    justify-content:space-between;
+    font-size:13px;
+}
 
-        .container {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
+.top-bar span{
+    margin-right:15px;
+}
 
-        .intro {
-            text-align: center;
-            margin-bottom: 35px;
-        }
 
-        .intro h2 {
-            color: #0b4f8a;
-            margin-bottom: 10px;
-        }
+/* =========================
+   HEADER
+========================= */
 
-        .facilities {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
+header{
+    background:white;
+    padding:15px 6%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
 
-        .facility-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.12);
-            transition: transform 0.3s;
-        }
+    box-shadow:0 2px 10px rgba(0,0,0,.12);
 
-        .facility-card:hover {
-            transform: translateY(-5px);
-        }
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
 
-        .facility-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-        }
 
-        .facility-card h3 {
-            color: #0b4f8a;
-            padding: 15px 15px 5px;
-        }
+/* =========================
+   LOGO
+========================= */
 
-        .facility-card p {
-            padding: 0 15px 20px;
-            font-size: 14px;
-        }
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
 
-        footer {
-            background: #083b66;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 50px;
-        }
+.school-logo{
+    width:72px;
+    height:72px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#ff9933,#ffffff,#138808);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#063b7a;
+    font-size:13px;
+    font-weight:bold;
+    border:3px solid #063b7a;
+    flex-shrink:0;
+}
 
-        @media (max-width: 800px) {
-            .facilities {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
+.school-logo img{
+    width:110%;
+    height:110%;
+    object-fit:cover;
+    border-radius:50%;
+}
 
-        @media (max-width: 550px) {
-            header h1 {
-                font-size: 22px;
-            }
+.school-name h1{
+    color:#063b7a;
+    font-size:21px;
+    line-height:1.25;
+}
 
-            nav a {
-                display: inline-block;
-                margin: 5px 7px;
-            }
+.school-name h2{
+    color:#d88900;
+    font-size:15px;
+    margin-top:3px;
+}
 
-            .hero h2 {
-                font-size: 30px;
-            }
+.school-name p{
+    font-size:12px;
+    color:#555;
+}
 
-            .facilities {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav ul{
+    list-style:none;
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:17px;
+}
+
+nav a{
+    color:#123;
+
+    font-weight:bold;
+
+    font-size:13px;
+}
+
+nav a:hover{
+    color:#e18b00;
+}
+
+
+/* =========================
+   PAGE TITLE
+========================= */
+
+.page-title{
+
+    background:
+    linear-gradient(
+        rgba(0,48,105,.82),
+        rgba(0,48,105,.82)
+    ),
+    linear-gradient(
+        135deg,
+        #1769aa,
+        #4ca4d8
+    );
+
+    color:white;
+
+    text-align:center;
+
+    padding:65px 20px;
+}
+
+.page-title h1{
+    font-size:42px;
+
+    margin-bottom:8px;
+}
+
+.page-title p{
+    font-size:18px;
+}
+
+
+/* =========================
+   FACILITIES
+========================= */
+
+.facilities-section{
+    padding:70px 7%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title h2{
+    color:#063b7a;
+    font-size:31px;
+}
+
+.section-title p{
+    color:#777;
+    margin-top:5px;
+}
+
+
+/* =========================
+   FACILITY GRID
+========================= */
+
+.facility-grid{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:28px;
+}
+
+
+/* =========================
+   FACILITY CARD
+========================= */
+
+.facility-card{
+
+    background:white;
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.facility-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+    0 9px 28px rgba(0,0,0,.14);
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.facility-image{
+
+    width:100%;
+
+    height:220px;
+
+    background:#dbeafe;
+
+    overflow:hidden;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#063b7a;
+
+    font-weight:bold;
+}
+
+.facility-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.facility-card:hover
+.facility-image img{
+
+    transform:scale(1.04);
+}
+
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.facility-content{
+
+    padding:22px;
+
+}
+
+.facility-content h3{
+
+    color:#063b7a;
+
+    font-size:21px;
+
+    margin-bottom:6px;
+}
+
+.facility-content .hindi{
+
+    color:#d88900;
+
+    font-weight:bold;
+
+    font-size:14px;
+
+    margin-bottom:10px;
+}
+
+.facility-content p{
+
+    color:#555;
+
+    font-size:14px;
+}
+
+
+/* =========================
+   IMAGE VIEWER
+========================= */
+
+.image-viewer{
+
+    display:none;
+
+    position:fixed;
+
+    z-index:5000;
+
+    left:0;
+    top:0;
+
+    width:100%;
+    height:100%;
+
+    background:
+    rgba(0,0,0,.88);
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:20px;
+}
+
+.image-viewer img{
+
+    max-width:95%;
+
+    max-height:90%;
+
+    object-fit:contain;
+
+    border-radius:8px;
+}
+
+.close-viewer{
+
+    position:absolute;
+
+    top:18px;
+
+    right:28px;
+
+    color:white;
+
+    font-size:40px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    line-height:1;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    background:#032752;
+
+    color:white;
+
+    padding:35px 7% 20px;
+
+    text-align:center;
+}
+
+footer p{
+
+    color:#dbe7f5;
+
+    font-size:14px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:1050px){
+
+    header{
+        flex-direction:column;
+    }
+
+    .facility-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+    .top-bar{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        gap:4px;
+    }
+
+    .school-logo{
+
+        width:60px;
+        height:60px;
+    }
+
+    .school-name h1{
+
+        font-size:16px;
+    }
+
+    .school-name h2{
+
+        font-size:12px;
+    }
+
+    nav ul{
+
+        gap:9px;
+    }
+
+    nav a{
+
+        font-size:12px;
+    }
+
+    .page-title{
+
+        padding:50px 20px;
+    }
+
+    .page-title h1{
+
+        font-size:30px;
+    }
+
+    .page-title p{
+
+        font-size:15px;
+    }
+
+    .facilities-section{
+
+        padding:55px 5%;
+    }
+
+    .facility-grid{
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+    }
+
+    .facility-image{
+
+        height:210px;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media(max-width:450px){
+
+    .facility-image{
+
+        height:200px;
+    }
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
-    <header>
-        <h1>PM SHRI UHS Khukradih</h1>
-        <p>Quality Education • Holistic Development • Bright Future</p>
-    </header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="academics.html">Academic</a>
-        <a href="facilities.html">Facilities</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+<!-- =========================
+     TOP BAR
+========================= -->
 
-    <section class="hero">
-        <h2>Campus & Facilities</h2>
-    </section>
+<div class="top-bar">
 
-    <div class="container">
+<span>
+🇮🇳 Government of Jharkhand
+</span>
 
-        <section class="intro">
-            <h2>Our Campus & Facilities</h2>
+<span>
+PM SHRI School • East Singhbhum
+</span>
 
-            <p>
-                PM SHRI UHS Khukradih provides a safe, supportive and
-                learning-friendly environment for students. Our campus
-                facilities are designed to support academic learning,
-                creativity, physical development and overall growth.
-            </p>
-        </section>
-
-        <section class="facilities">
-
-            <div class="facility-card">
-                <div class="facility-image">
-    <img src="images/school-campus.jpeg" alt="School Campus">
 </div>
 
-                <h3>School Campus</h3>
 
-                <p>
-                    A clean, safe and welcoming campus that provides
-                    students with a positive learning environment.
-                </p>
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+
+<div class="logo-area">
+
+
+<div class="school-logo">
+
+<img
+src="logo.png"
+alt="PM SHRI UHS Khukradih Logo">
+
+</div>
+
+
+<div class="school-name">
+
+<h1>
+PM SHRI UHS KHUKRADIH
+</h1>
+
+<h2>
+PM SHRI UPGRADED GOVT. HIGH SCHOOL
+</h2>
+
+<p>
+Khukradih, East Singhbhum, Jharkhand
+</p>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+<ul>
+
+<li>
+<a href="index.html">
+Home
+</a>
+</li>
+
+<li>
+<a href="about.html">
+About School
+</a>
+</li>
+
+<li>
+<a href="academics.html">
+Academics
+</a>
+</li>
+
+<li>
+<a href="staff.html">
+Staff
+</a>
+</li>
+
+<li>
+<a href="facilities.html">
+Facilities
+</a>
+</li>
+
+<li>
+<a href="gallery.html">
+Gallery
+</a>
+</li>
+
+<li>
+<a href="notices.html">
+Notice Board
+</a>
+</li>
+
+<li>
+<a href="events.html">
+Events
+</a>
+</li>
+
+<li>
+<a href="admission.html">
+Admission
+</a>
+</li>
+
+<li>
+<a href="contact.html">
+Contact
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+<!-- =========================
+     PAGE TITLE
+========================= -->
+
+<section class="page-title">
+
+<h1>
+School Facilities
+</h1>
+
+<p>
+विद्यालय की सुविधाएँ
+</p>
+
+</section>
+
+
+<!-- =========================
+     FACILITIES
+========================= -->
+
+<section class="facilities-section">
+
+
+<div class="section-title">
+
+<h2>
+Our Facilities
+</h2>
+
+<p>
+हमारे विद्यालय में उपलब्ध सुविधाएँ
+</p>
+
+</div>
+
+
+<div
+class="facility-grid"
+id="facilityGrid">
+
+
+<!-- Facilities will load automatically -->
+
+</div>
+
+
+</section>
+
+
+<!-- =========================
+     IMAGE VIEWER
+========================= -->
+
+<div
+class="image-viewer"
+id="imageViewer">
+
+<span
+class="close-viewer"
+onclick="closeViewer()">
+&times;
+</span>
+
+<img
+id="viewerImage"
+src=""
+alt="Facility Image">
+
+</div>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<p>
+© 2026 PM SHRI UHS Khukradih.
+All Rights Reserved.
+</p>
+
+</footer>
+
+
+<script>
+
+
+/* =========================
+   FACILITY DATA
+========================= */
+
+const facilities = [
+
+    {
+        title: "School Campus",
+        hindi: "विद्यालय परिसर",
+        image: "images/facilities/campus.jpeg",
+        description:
+        "A welcoming and well-maintained school campus providing a positive environment for learning and development."
+    },
+
+    {
+        title: "Smart Classroom",
+        hindi: "स्मार्ट कक्षा",
+        image: "images/facilities/smart-classroom.jpeg",
+        description:
+        "Digital and smart learning facilities that help students learn through modern educational methods."
+    },
+
+    {
+        title: "Library",
+        hindi: "पुस्तकालय",
+        image: "images/facilities/library.jpeg",
+        description:
+        "A learning space where students can read books, explore knowledge and develop reading habits."
+    },
+
+    {
+        title: "Laboratory",
+        hindi: "प्रयोगशाला",
+        image: "images/facilities/laboratory.jpeg",
+        description:
+        "A practical learning environment where students can understand concepts through experiments and activities."
+    },
+
+    {
+        title: "Playground",
+        hindi: "खेल मैदान",
+        image: "images/facilities/playground.jpeg",
+        description:
+        "Open space for sports, physical activities and overall physical development of students."
+    },
+
+    {
+        title: "Activity Room",
+        hindi: "गतिविधि कक्ष",
+        image: "images/facilities/activity.jpeg",
+        description:
+        "A dedicated space for creative, cultural, educational and skill-development activities."
+    },
+
+    {
+        title: "Other Facilities",
+        hindi: "अन्य सुविधाएँ",
+        image: "images/facilities/other.jpeg",
+        description:
+        "Additional facilities and resources that support students' learning and holistic development."
+    }
+
+];
+
+
+/* =========================
+   CREATE FACILITY CARDS
+========================= */
+
+const grid =
+document.getElementById(
+    "facilityGrid"
+);
+
+
+facilities.forEach(
+    function(facility){
+
+        const card =
+        document.createElement(
+            "div"
+        );
+
+
+        card.className =
+        "facility-card";
+
+
+        card.innerHTML = `
+
+            <div class="facility-image">
+
+                <img
+
+                src="${facility.image}"
+
+                alt="${facility.title}"
+
+                loading="lazy"
+
+                onclick="openViewer(
+                    '${facility.image}',
+                    '${facility.title}'
+                )"
+
+                >
+
             </div>
 
 
-            <div class="facility-card">
-                <div class="facility-image">
-                    Classroom Photo
+            <div class="facility-content">
+
+                <h3>
+                    ${facility.title}
+                </h3>
+
+                <div class="hindi">
+                    ${facility.hindi}
                 </div>
 
-                <h3>Classrooms</h3>
-
                 <p>
-                    Well-maintained classrooms designed to provide
-                    students with a comfortable learning atmosphere.
+                    ${facility.description}
                 </p>
+
             </div>
 
-
-            <div class="facility-card">
-                <div class="facility-image">
-                    Library Photo
-                </div>
-
-                <h3>Library</h3>
-
-                <p>
-                    A learning space where students can read, explore
-                    books and develop a habit of self-learning.
-                </p>
-            </div>
+        `;
 
 
-            <div class="facility-card">
-                <div class="facility-image">
-                    Computer Lab Photo
-                </div>
+        grid.appendChild(card);
 
-                <h3>Computer Lab</h3>
-
-                <p>
-                    Computer facilities to help students develop
-                    digital skills and understand modern technology.
-                </p>
-            </div>
+    }
+);
 
 
-            <div class="facility-card">
-                <div class="facility-image">
-                    Science Lab Photo
-                </div>
+/* =========================
+   IMAGE VIEWER
+========================= */
 
-                <h3>Science Laboratory</h3>
+function openViewer(
+    image,
+    title
+){
 
-                <p>
-                    A practical learning environment where students
-                    can understand scientific concepts through activities.
-                </p>
-            </div>
+    const viewer =
+    document.getElementById(
+        "imageViewer"
+    );
 
-
-            <div class="facility-card">
-                <div class="facility-image">
-                    Playground Photo
-                </div>
-
-                <h3>Playground</h3>
-
-                <p>
-                    Open space for sports, physical activities and
-                    healthy development of students.
-                </p>
-            </div>
+    const viewerImage =
+    document.getElementById(
+        "viewerImage"
+    );
 
 
-            <div class="facility-card">
-                <div class="facility-image">
-                    Drinking Water Photo
-                </div>
+    viewerImage.src =
+    image;
 
-                <h3>Drinking Water</h3>
-
-                <p>
-                    Drinking water facilities are available for
-                    students and staff.
-                </p>
-            </div>
+    viewerImage.alt =
+    title;
 
 
-            <div class="facility-card">
-                <div class="facility-image">
-                    School Activity Photo
-                </div>
+    viewer.style.display =
+    "flex";
 
-                <h3>Activity Areas</h3>
-
-                <p>
-                    Spaces for educational, cultural and co-curricular
-                    activities that encourage student participation.
-                </p>
-            </div>
+}
 
 
-            <div class="facility-card">
-                <div class="facility-image">
-                    Other Facility Photo
-                </div>
+/* =========================
+   CLOSE VIEWER
+========================= */
 
-                <h3>Other Facilities</h3>
+function closeViewer(){
 
-                <p>
-                    Additional facilities supporting the overall
-                    educational and developmental needs of students.
-                </p>
-            </div>
+    document.getElementById(
+        "imageViewer"
+    ).style.display =
+    "none";
 
-        </section>
+}
 
-    </div>
 
-    <footer>
-        <p>© 2026 PM SHRI UHS Khukradih. All Rights Reserved.</p>
-    </footer>
+/* =========================
+   CLOSE BY CLICKING OUTSIDE
+========================= */
+
+document
+.getElementById("imageViewer")
+.addEventListener(
+    "click",
+    function(event){
+
+        if(
+            event.target === this
+        ){
+
+            closeViewer();
+
+        }
+
+    }
+);
+
+
+/* =========================
+   CLOSE WITH ESC KEY
+========================= */
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(
+            event.key === "Escape"
+        ){
+
+            closeViewer();
+
+        }
+
+    }
+);
+
+
+</script>
+
 
 </body>
+
 </html>
