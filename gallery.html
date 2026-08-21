@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Gallery | PM SHRI UHS Khukradih</title>
 
-<meta name="description" content="Photo Gallery of PM SHRI UHS Khukradih, East Singhbhum, Jharkhand.">
+<meta name="description"
+content="Photo Gallery of PM SHRI UHS Khukradih, East Singhbhum, Jharkhand.">
 
 <style>
 
@@ -241,55 +239,7 @@ nav a:hover{
 
 
 /* =========================
-   PHOTO AREA
-========================= */
-
-.photo-area{
-    margin-top:55px;
-}
-
-.photo-title{
-    text-align:center;
-    margin-bottom:25px;
-}
-
-.photo-title h2{
-    color:#063b7a;
-}
-
-.photo-title p{
-    color:#777;
-}
-
-.photo-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-}
-
-.photo-card{
-    background:white;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 5px 18px rgba(0,0,0,.10);
-    cursor:pointer;
-    transition:.3s;
-}
-
-.photo-card:hover{
-    transform:translateY(-5px);
-}
-
-.photo-card img{
-    width:100%;
-    height:230px;
-    object-fit:cover;
-    display:block;
-}
-
-
-/* =========================
-   IMAGE ZOOM
+   IMAGE MODAL
 ========================= */
 
 .image-modal{
@@ -298,33 +248,126 @@ nav a:hover{
     z-index:9999;
     left:0;
     top:0;
+
     width:100%;
     height:100%;
-    background:rgba(0,0,0,.92);
+
+    background:rgba(0,0,0,.94);
 
     justify-content:center;
     align-items:center;
 
-    padding:20px;
+    padding:70px 20px 30px;
+}
+
+.image-modal-content{
+    width:100%;
+    max-width:1000px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
 }
 
 .image-modal img{
-    max-width:95%;
-    max-height:90%;
+    max-width:90%;
+    max-height:75vh;
+
     object-fit:contain;
-    border-radius:8px;
+
+    border-radius:10px;
+
+    box-shadow:0 5px 30px rgba(0,0,0,.5);
 }
+
+.modal-title{
+    color:white;
+    text-align:center;
+    margin-bottom:15px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.modal-counter{
+    color:#ddd;
+    text-align:center;
+    margin-top:12px;
+    font-size:14px;
+}
+
+
+/* =========================
+   CLOSE BUTTON
+========================= */
 
 .close-button{
     position:absolute;
+
     top:15px;
     right:25px;
 
     color:white;
+
     font-size:45px;
     font-weight:bold;
 
     cursor:pointer;
+
+    line-height:1;
+}
+
+.close-button:hover{
+    color:#ffb300;
+}
+
+
+/* =========================
+   PREVIOUS / NEXT
+========================= */
+
+.prev-button,
+.next-button{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:50px;
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.2);
+
+    color:white;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+}
+
+.prev-button{
+    left:25px;
+}
+
+.next-button{
+    right:25px;
+}
+
+.prev-button:hover,
+.next-button:hover{
+    background:rgba(255,255,255,.4);
 }
 
 
@@ -357,10 +400,6 @@ footer p{
 
     .category-grid{
         grid-template-columns:repeat(3,1fr);
-    }
-
-    .photo-grid{
-        grid-template-columns:repeat(2,1fr);
     }
 }
 
@@ -418,12 +457,34 @@ footer p{
         grid-template-columns:1fr 1fr;
     }
 
-    .photo-grid{
-        grid-template-columns:1fr;
+    .image-modal{
+        padding:60px 10px 20px;
     }
 
-    .photo-card img{
-        height:240px;
+    .image-modal img{
+        max-width:95%;
+        max-height:70vh;
+    }
+
+    .prev-button,
+    .next-button{
+        width:42px;
+        height:42px;
+        font-size:25px;
+    }
+
+    .prev-button{
+        left:10px;
+    }
+
+    .next-button{
+        right:10px;
+    }
+
+    .close-button{
+        right:15px;
+        top:10px;
+        font-size:40px;
     }
 }
 
@@ -438,58 +499,69 @@ footer p{
         grid-template-columns:1fr;
     }
 
+    .image-modal img{
+        max-height:65vh;
+    }
+
 }
 
 </style>
-
 </head>
 
 
 <body>
 
 
-<!-- TOP BAR -->
+<!-- =========================
+     TOP BAR
+========================= -->
 
 <div class="top-bar">
 
-<span>🇮🇳 Government of Jharkhand</span>
+    <span>🇮🇳 Government of Jharkhand</span>
 
-<span>PM SHRI School • East Singhbhum</span>
+    <span>PM SHRI School • East Singhbhum</span>
 
 </div>
 
 
-<!-- HEADER -->
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
-
 <div class="logo-area">
 
+    <div class="school-logo">
 
-<div class="school-logo">
+        <img
+        src="logo.png"
+        alt="PM SHRI UHS Khukradih Logo">
 
-<img src="logo.png"
-alt="PM SHRI UHS Khukradih Logo">
+    </div>
+
+
+    <div class="school-name">
+
+        <h1>PM SHRI UHS KHUKRADIH</h1>
+
+        <h2>
+        PM SHRI UPGRADED GOVT. HIGH SCHOOL
+        </h2>
+
+        <p>
+        Khukradih, East Singhbhum, Jharkhand
+        </p>
+
+    </div>
 
 </div>
 
 
-<div class="school-name">
-
-<h1>PM SHRI UHS KHUKRADIH</h1>
-
-<h2>PM SHRI UPGRADED GOVT. HIGH SCHOOL</h2>
-
-<p>Khukradih, East Singhbhum, Jharkhand</p>
-
-</div>
-
-
-</div>
-
-
-<!-- NAVIGATION -->
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <nav>
 
@@ -542,171 +614,250 @@ alt="PM SHRI UHS Khukradih Logo">
 </header>
 
 
-<!-- PAGE TITLE -->
+<!-- =========================
+     PAGE TITLE
+========================= -->
 
 <section class="page-title">
 
-<h1>School Gallery</h1>
+<h1>
+School Gallery
+</h1>
 
-<p>विद्यालय की फोटो गैलरी</p>
+<p>
+विद्यालय की फोटो गैलरी
+</p>
 
 </section>
 
 
-<!-- GALLERY -->
+<!-- =========================
+     GALLERY
+========================= -->
 
 <section class="gallery-section">
 
 
 <div class="section-title">
 
-<h2>Explore Our Gallery</h2>
+<h2>
+Explore Our Gallery
+</h2>
 
-<p>किसी भी श्रेणी पर क्लिक करके तस्वीरें देखें</p>
+<p>
+किसी भी श्रेणी पर क्लिक करके तस्वीरें देखें
+</p>
 
 </div>
 
 
-<!-- CATEGORY BUTTONS -->
+<!-- =========================
+     CATEGORY BUTTONS
+========================= -->
 
 <div class="category-grid">
 
 
-<div class="category-card"
+<!-- CAMPUS -->
+
+<div
+class="category-card"
 onclick="loadGallery(
 'campus',
 'School Campus',
 'विद्यालय परिसर'
-)">
+)"
+>
 
 <div class="category-icon">
 🏫
 </div>
 
-<h3>Campus</h3>
+<h3>
+Campus
+</h3>
 
-<p>विद्यालय परिसर</p>
+<p>
+विद्यालय परिसर
+</p>
 
 </div>
 
 
-<div class="category-card"
+<!-- CLASSROOM -->
+
+<div
+class="category-card"
 onclick="loadGallery(
 'classroom',
 'Classrooms',
 'कक्षा कक्ष'
-)">
+)"
+>
 
 <div class="category-icon">
 📚
 </div>
 
-<h3>Classroom</h3>
+<h3>
+Classroom
+</h3>
 
-<p>कक्षा कक्ष</p>
+<p>
+कक्षा कक्ष
+</p>
 
 </div>
 
 
-<div class="category-card"
+<!-- ACTIVITIES -->
+
+<div
+class="category-card"
 onclick="loadGallery(
 'activities',
 'Activities',
 'विद्यालय गतिविधियाँ'
-)">
+)"
+>
 
 <div class="category-icon">
 🌱
 </div>
 
-<h3>Activities</h3>
+<h3>
+Activities
+</h3>
 
-<p>विद्यालय गतिविधियाँ</p>
+<p>
+विद्यालय गतिविधियाँ
+</p>
 
 </div>
 
 
-<div class="category-card"
+<!-- SPORTS -->
+
+<div
+class="category-card"
 onclick="loadGallery(
 'sports',
 'Sports',
 'खेल गतिविधियाँ'
-)">
+)"
+>
 
 <div class="category-icon">
 ⚽
 </div>
 
-<h3>Sports</h3>
+<h3>
+Sports
+</h3>
 
-<p>खेल गतिविधियाँ</p>
+<p>
+खेल गतिविधियाँ
+</p>
 
 </div>
 
 
-<div class="category-card"
+<!-- EVENTS -->
+
+<div
+class="category-card"
 onclick="loadGallery(
 'events',
 'Events',
 'विद्यालय कार्यक्रम'
-)">
+)"
+>
 
 <div class="category-icon">
 🎉
 </div>
 
-<h3>Events</h3>
-
-<p>विद्यालय कार्यक्रम</p>
-
-</div>
-
-
-</div>
-
-
-<!-- PHOTO AREA -->
-
-<div class="photo-area"
-id="photoArea">
-
-<div class="photo-title">
-
-<h2>Select a Category</h2>
+<h3>
+Events
+</h3>
 
 <p>
-ऊपर किसी category पर क्लिक करें
+विद्यालय कार्यक्रम
 </p>
 
 </div>
 
-</div>
 
+</div>
 
 </section>
 
 
-<!-- IMAGE ZOOM -->
+<!-- =========================
+     IMAGE POPUP
+========================= -->
 
-<div class="image-modal"
+<div
+class="image-modal"
 id="imageModal"
-onclick="closeImage(event)">
+onclick="closeImage(event)"
+>
 
-<span class="close-button"
-onclick="closeImage()">
 
+<span
+class="close-button"
+onclick="closeImage()"
+>
 ×
 </span>
+
+
+<button
+class="prev-button"
+onclick="previousImage(event)"
+>
+‹
+</button>
+
+
+<div class="image-modal-content">
+
+
+<div
+class="modal-title"
+id="modalTitle">
+</div>
+
 
 <img
 id="zoomedImage"
 src=""
 alt="Gallery Image">
 
+
+<div
+class="modal-counter"
+id="modalCounter">
 </div>
 
 
-<!-- FOOTER -->
+</div>
+
+
+<button
+class="next-button"
+onclick="nextImage(event)"
+>
+›
+</button>
+
+
+</div>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -719,7 +870,6 @@ alt="Gallery Image">
 
 <script>
 
-
 /* =========================
    GITHUB DETAILS
 ========================= */
@@ -727,6 +877,15 @@ alt="Gallery Image">
 const OWNER = "uhskhukradih";
 
 const REPO = "pmshriuhskhukradih";
+
+
+/* =========================
+   GALLERY VARIABLES
+========================= */
+
+let currentPhotos = [];
+
+let currentIndex = 0;
 
 
 /* =========================
@@ -739,43 +898,26 @@ async function loadGallery(
     hindiTitle
 ){
 
-    const photoArea =
-    document.getElementById("photoArea");
+    const modal =
+    document.getElementById("imageModal");
+
+    const zoomedImage =
+    document.getElementById("zoomedImage");
+
+    const modalTitle =
+    document.getElementById("modalTitle");
+
+    const modalCounter =
+    document.getElementById("modalCounter");
 
 
-    photoArea.innerHTML = `
-
-        <div class="photo-title">
-
-            <h2>${title}</h2>
-
-            <p>${hindiTitle}</p>
-
-        </div>
-
-        <div class="photo-grid"
-        id="photoGrid">
-
-            <p style="
-            grid-column:1/-1;
-            text-align:center;
-            ">
-
-            Loading photos...
-
-            </p>
-
-        </div>
-
-    `;
-
+    /* GitHub API URL */
 
     const apiURL =
     `https://api.github.com/repos/${OWNER}/${REPO}/contents/images/${folder}`;
 
 
     try{
-
 
         const response =
         await fetch(apiURL);
@@ -784,7 +926,7 @@ async function loadGallery(
         if(!response.ok){
 
             throw new Error(
-            "Folder not found"
+                "Folder not found"
             );
 
         }
@@ -794,14 +936,10 @@ async function loadGallery(
         await response.json();
 
 
-        /*
-
-        Only .jpeg files will be shown.
-
-        */
+        /* Only JPEG photos */
 
         const photos =
-        files.filter(file => {
+        files.filter(function(file){
 
             return file.type === "file"
             &&
@@ -812,106 +950,64 @@ async function loadGallery(
         });
 
 
-        const photoGrid =
-        document.getElementById(
-        "photoGrid"
-        );
-
-
         if(photos.length === 0){
 
-            photoGrid.innerHTML = `
-
-                <p style="
-                grid-column:1/-1;
-                text-align:center;
-                color:#777;
-                ">
-
-                अभी इस category में कोई
-                photo उपलब्ध नहीं है।
-
-                </p>
-
-            `;
+            alert(
+                "इस category में अभी कोई photo उपलब्ध नहीं है।"
+            );
 
             return;
 
         }
 
 
-        photoGrid.innerHTML = "";
+        /* Save photos */
 
+        currentPhotos =
+        photos.map(function(photo){
 
-        photos.forEach(photo => {
-
-
-            const card =
-            document.createElement(
-            "div"
-            );
-
-
-            card.className =
-            "photo-card";
-
-
-            card.onclick =
-            function(){
-
-                openImage(
-                photo.download_url
-                );
-
-            };
-
-
-            card.innerHTML = `
-
-                <img
-                src="${photo.download_url}"
-                alt="${title}">
-
-            `;
-
-
-            photoGrid.appendChild(
-            card
-            );
-
+            return photo.download_url;
 
         });
 
+
+        currentIndex = 0;
+
+
+        /* Show first photo */
+
+        modalTitle.innerHTML =
+        title;
+
+
+        zoomedImage.src =
+        currentPhotos[currentIndex];
+
+
+        modalCounter.innerHTML =
+        "Photo 1 of " + currentPhotos.length;
+
+
+        /* Open popup */
+
+        modal.style.display =
+        "flex";
+
+
+        /* Prevent page scrolling */
+
+        document.body.style.overflow =
+        "hidden";
 
     }
 
     catch(error){
 
-
-        photoArea.innerHTML = `
-
-            <div class="photo-title">
-
-                <h2>${title}</h2>
-
-                <p>${hindiTitle}</p>
-
-                <p style="
-                color:#d00000;
-                margin-top:15px;
-                ">
-
-                Photos load नहीं हो पाईं।
-                कृपया GitHub में
-                images/${folder}
-                folder check करें।
-
-                </p>
-
-            </div>
-
-        `;
-
+        alert(
+            "Photos load नहीं हो पाईं। कृपया GitHub में images/" +
+            folder +
+            " folder check करें।"
+        );
 
     }
 
@@ -919,23 +1015,99 @@ async function loadGallery(
 
 
 /* =========================
-   IMAGE ZOOM
+   SHOW PHOTO
 ========================= */
 
-function openImage(
-    imagePath
-){
+function showCurrentImage(){
 
-    document.getElementById(
-    "imageModal"
-    ).style.display =
-    "flex";
+    const zoomedImage =
+    document.getElementById("zoomedImage");
 
 
-    document.getElementById(
-    "zoomedImage"
-    ).src =
-    imagePath;
+    const modalCounter =
+    document.getElementById("modalCounter");
+
+
+    zoomedImage.src =
+    currentPhotos[currentIndex];
+
+
+    modalCounter.innerHTML =
+    "Photo " +
+    (currentIndex + 1) +
+    " of " +
+    currentPhotos.length;
+
+}
+
+
+/* =========================
+   NEXT IMAGE
+========================= */
+
+function nextImage(event){
+
+    if(event){
+
+        event.stopPropagation();
+
+    }
+
+
+    if(currentPhotos.length === 0){
+
+        return;
+
+    }
+
+
+    currentIndex++;
+
+
+    if(currentIndex >= currentPhotos.length){
+
+        currentIndex = 0;
+
+    }
+
+
+    showCurrentImage();
+
+}
+
+
+/* =========================
+   PREVIOUS IMAGE
+========================= */
+
+function previousImage(event){
+
+    if(event){
+
+        event.stopPropagation();
+
+    }
+
+
+    if(currentPhotos.length === 0){
+
+        return;
+
+    }
+
+
+    currentIndex--;
+
+
+    if(currentIndex < 0){
+
+        currentIndex =
+        currentPhotos.length - 1;
+
+    }
+
+
+    showCurrentImage();
 
 }
 
@@ -946,11 +1118,10 @@ function openImage(
 
 function closeImage(event){
 
-
     if(
-        event &&
-        event.target.id !==
-        "imageModal"
+        event
+        &&
+        event.target.id !== "imageModal"
     ){
 
         return;
@@ -958,22 +1129,79 @@ function closeImage(event){
     }
 
 
-    document.getElementById(
-    "imageModal"
-    ).style.display =
+    const modal =
+    document.getElementById("imageModal");
+
+
+    const zoomedImage =
+    document.getElementById("zoomedImage");
+
+
+    modal.style.display =
     "none";
 
 
-    document.getElementById(
-    "zoomedImage"
-    ).src =
+    zoomedImage.src =
+    "";
+
+
+    document.body.style.overflow =
     "";
 
 }
+
+
+/* =========================
+   KEYBOARD CONTROLS
+========================= */
+
+document.addEventListener(
+"keydown",
+function(event){
+
+    const modal =
+    document.getElementById("imageModal");
+
+
+    if(modal.style.display !== "flex"){
+
+        return;
+
+    }
+
+
+    if(event.key === "ArrowRight"){
+
+        nextImage();
+
+    }
+
+
+    if(event.key === "ArrowLeft"){
+
+        previousImage();
+
+    }
+
+
+    if(event.key === "Escape"){
+
+        modal.style.display =
+        "none";
+
+        document.getElementById(
+            "zoomedImage"
+        ).src = "";
+
+        document.body.style.overflow =
+        "";
+
+    }
+
+});
 
 </script>
 
 
 </body>
-
 </html>
