@@ -5,9 +5,93 @@
     "photo": "images/principal.jpeg"
   },
 
-    {
-    "name": "Teacher 2",
-    "designation": "Teacher • शिक्षक",
-    "photo": "images/staff/teacher2.jpeg"
+  {
+    "name": "Manoj Kumar Singh",
+    "designation": "Trained Graduate Teacher • प्रशिक्षित स्नातक शिक्षक",
+    "photo": "images/staff/ManojKumarSingh.jpeg"
+  }
+
+{
+    "name": "Sanat Kumar Bhowmik",
+    "designation": "Trained Graduate Teacher • प्रशिक्षित स्नातक शिक्षक",
+    "photo": "images/staff/SanatKumarBhattacharya.jpeg"
+  }
+
+{
+    "name": "Bagun Patr",
+    "designation": "Assistant Teacher • सहायक शिक्षक",
+    "photo": "images/staff/BagunPatr.jpeg"
+  }
+
+{
+    "name": "Deepak Kumar Singh",
+    "designation": "Assistant Teacher • सहायक शिक्षिक",
+    "photo": "images/staff/DeepakKumarSingh.jpeg"
+  }
+
+{
+    "name": "Ranjit Kumar Jha",
+    "designation": "Assistant Teacher • सहायक शिक्षक",
+    "photo": "images/staff/RanjitKumarJha.jpeg"
+  }
+
+{
+    "name": "Manjusha Kerketta",
+    "designation": "Assistant Teacher • सहायक शिक्षिका",
+    "photo": "images/staff/ManjushaKerketta.jpeg"
+  }
+
+{
+    "name": "Maya Hansda",
+    "designation": "Trained Graduate Teacher • प्रशिक्षित स्नातक शिक्षिका",
+    "photo": "images/staff/MayaHansda.jpeg"
+  }
+
+{
+    "name": "Kalpana Agrawal",
+    "designation": "Trained Graduate Teacher • प्रशिक्षित स्नातक शिक्षिका",
+    "photo": "images/staff/KalpanaAgrawal.jpeg"
+  }
+
+{
+    "name": "Bharti Dubey",
+    "designation": "Trained Graduate Teacher • प्रशिक्षित स्नातक शिक्षिका",
+    "photo": "images/staff/BhartiDubey.jpeg"
+  }
+
+{
+    "name": "Baby Mahi",
+    "designation": "Trained Graduate Teacher • प्रशिक्षित स्नातक शिक्षिका",
+    "photo": "images/staff/BabyMahi.jpeg"
+  }
+
+{
+    "name": "Mita Kumari",
+    "designation": "Trained Graduate Teacher • प्रशिक्षित स्नातक शिक्षिका",
+    "photo": "images/staff/MitaKumari.jpeg"
+  }
+
+{
+    "name": "Reshma Parveen",
+    "designation": "Trained Graduate Teacher • प्रशिक्षित स्नातक शिक्षिका",
+    "photo": "images/staff/ReshmaParveen.jpeg"
+  }
+
+{
+    "name": "Amit Kumar",
+    "designation": "Trained Graduate Teacher • प्रशिक्षित स्नातक शिक्षिक",
+    "photo": "images/staff/AmitKumar.jpeg"
+  }
+
+{
+    "name": "Akash Choubey",
+    "designation": "Clerk • लिपिक",
+    "photo": "images/staff/AkashChoubey.jpeg"
+  }
+
+{
+    "name": "Malti Hansda",
+    "designation": "Orderly • आदेशपाल",
+    "photo": "images/staff/MaltiHansda.jpeg"
   }
 ]
