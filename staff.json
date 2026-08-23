@@ -7,20 +7,20 @@
 
   {
     "name": "Manoj Kumar Singh",
-    "designation": "Trained Graduate Teacher • प्रशिक्षित स्नातक शिक्षक",
+    "designation": "Trained Graduate Teacher • प्रशिक्षित स्नातक शिक्षक (Lang)",
     "photo": "images/staff/ManojKumarSingh.jpeg"
   },
 
 {
     "name": "Sanat Kumar Bhowmik",
-    "designation": "Trained Graduate Teacher • प्रशिक्षित स्नातक शिक्षक",
-    "photo": "images/staff/SanatKumarBhattacharya.jpeg"
+    "designation": "Trained Graduate Teacher • प्रशिक्षित स्नातक शिक्षक (Art)",
+    "photo": "images/staff/SanatKumarBhowmik.jpeg"
   },
 
 {
-    "name": "Bagun Patr",
+    "name": "Bagun Patar",
     "designation": "Assistant Teacher • सहायक शिक्षक",
-    "photo": "images/staff/BagunPatr.jpeg"
+    "photo": "images/staff/BagunPatar.jpeg"
   },
 
 {
@@ -48,45 +48,45 @@
   },
 
 {
-    "name": "Kalpana Agrawal",
+    "name": "Kalpana Bhakat",
     "designation": "Trained Graduate Teacher • प्रशिक्षित स्नातक शिक्षिका",
-    "photo": "images/staff/KalpanaAgrawal.jpeg"
+    "photo": "images/staff/KalpanaBhakat.jpeg"
   },
 
 {
     "name": "Bharti Dubey",
-    "designation": "Trained Graduate Teacher • प्रशिक्षित स्नातक शिक्षिका",
+    "designation": "Trained Graduate Teacher • प्रशिक्षित स्नातक शिक्षिका (English)",
     "photo": "images/staff/BhartiDubey.jpeg"
   },
 
 {
-    "name": "Baby Mahi",
-    "designation": "Trained Graduate Teacher • प्रशिक्षित स्नातक शिक्षिका",
-    "photo": "images/staff/BabyMahi.jpeg"
+    "name": "Baby Mardi",
+    "designation": "Trained Graduate Teacher • प्रशिक्षित स्नातक शिक्षिका (Hindi).",
+    "photo": "images/staff/BabyMardi.jpeg"
   },
 
 {
-    "name": "Mita Kumari",
-    "designation": "Trained Graduate Teacher • प्रशिक्षित स्नातक शिक्षिका",
-    "photo": "images/staff/MitaKumari.jpeg"
+    "name": "Meeta Kumari",
+    "designation": "Trained Graduate Teacher • प्रशिक्षित स्नातक शिक्षिका (Math)",
+    "photo": "images/staff/MeetaKumari.jpeg"
   },
 
 {
     "name": "Reshma Parveen",
-    "designation": "Trained Graduate Teacher • प्रशिक्षित स्नातक शिक्षिका",
+    "designation": "Trained Graduate Teacher • प्रशिक्षित स्नातक शिक्षिका (Geog)",
     "photo": "images/staff/ReshmaParveen.jpeg"
   },
 
 {
     "name": "Amit Kumar",
-    "designation": "Trained Graduate Teacher • प्रशिक्षित स्नातक शिक्षिक",
+    "designation": "Trained Graduate Teacher • प्रशिक्षित स्नातक शिक्षिक (His/Civ)",
     "photo": "images/staff/AmitKumar.jpeg"
   },
 
 {
-    "name": "Akash Choubey",
+    "name": "Akash Choube",
     "designation": "Clerk • लिपिक",
-    "photo": "images/staff/AkashChoubey.jpeg"
+    "photo": "images/staff/AkashChoube.jpeg"
   },
 
 {
