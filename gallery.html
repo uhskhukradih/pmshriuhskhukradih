@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Gallery | PM SHRI UHS Khukradih</title>
@@ -66,7 +69,9 @@ header{
     align-items:center;
     justify-content:space-between;
     gap:20px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.12);
+
+    box-shadow:0 2px 10px rgba(0,0,0,.12);
+
     position:sticky;
     top:0;
     z-index:1000;
@@ -84,42 +89,62 @@ header{
 }
 
 .school-logo{
+
     width:72px;
     height:72px;
+
     border-radius:50%;
-    background:linear-gradient(135deg,#ff9933,#ffffff,#138808);
+
+    background:white;
+
     display:flex;
     justify-content:center;
     align-items:center;
-    text-align:center;
-    color:#063b7a;
-    font-size:13px;
-    font-weight:bold;
+
     border:3px solid #063b7a;
+
+    overflow:hidden;
+
     flex-shrink:0;
 }
 
 .school-logo img{
-    width:110%;
-    height:110%;
-    object-fit:cover;
+
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+
     border-radius:50%;
 }
 
+
+/* =========================
+   SCHOOL NAME
+========================= */
+
 .school-name h1{
+
     color:#063b7a;
+
     font-size:21px;
+
     line-height:1.25;
 }
 
 .school-name h2{
+
     color:#d88900;
+
     font-size:15px;
+
     margin-top:3px;
 }
 
 .school-name p{
+
     font-size:12px;
+
     color:#555;
 }
 
@@ -129,20 +154,29 @@ header{
 ========================= */
 
 nav ul{
+
     list-style:none;
+
     display:flex;
+
     flex-wrap:wrap;
+
     justify-content:center;
+
     gap:17px;
 }
 
 nav a{
+
     color:#123;
+
     font-weight:bold;
+
     font-size:13px;
 }
 
 nav a:hover{
+
     color:#e18b00;
 }
 
@@ -152,21 +186,27 @@ nav a:hover{
 ========================= */
 
 .page-title{
+
     background:
     linear-gradient(rgba(0,48,105,.82),rgba(0,48,105,.82)),
     linear-gradient(135deg,#1769aa,#4ca4d8);
 
     color:white;
+
     text-align:center;
+
     padding:70px 20px;
 }
 
 .page-title h1{
+
     font-size:42px;
+
     margin-bottom:10px;
 }
 
 .page-title p{
+
     font-size:18px;
 }
 
@@ -176,21 +216,28 @@ nav a:hover{
 ========================= */
 
 .gallery-section{
+
     padding:65px 7%;
 }
 
 .section-title{
+
     text-align:center;
+
     margin-bottom:40px;
 }
 
 .section-title h2{
+
     color:#063b7a;
+
     font-size:31px;
 }
 
 .section-title p{
+
     color:#777;
+
     margin-top:5px;
 }
 
@@ -200,40 +247,64 @@ nav a:hover{
 ========================= */
 
 .category-grid{
+
     display:grid;
+
     grid-template-columns:repeat(5,1fr);
+
     gap:20px;
+
+    max-width:1200px;
+
+    margin:auto;
 }
 
 .category-card{
+
     background:white;
+
     padding:30px 15px;
+
     text-align:center;
+
     border-radius:16px;
+
     box-shadow:0 5px 20px rgba(0,0,0,.08);
+
     cursor:pointer;
+
     transition:.3s;
+
     border:2px solid transparent;
 }
 
 .category-card:hover{
+
     transform:translateY(-6px);
+
     border-color:#063b7a;
 }
 
 .category-icon{
+
     font-size:42px;
+
     margin-bottom:10px;
 }
 
 .category-card h3{
+
     color:#063b7a;
+
     font-size:18px;
 }
 
 .category-card p{
+
     color:#777;
+
     font-size:13px;
+
     margin-top:5px;
 }
 
@@ -243,35 +314,49 @@ nav a:hover{
 ========================= */
 
 .image-modal{
+
     display:none;
+
     position:fixed;
+
     z-index:9999;
+
     left:0;
+
     top:0;
 
     width:100%;
+
     height:100%;
 
     background:rgba(0,0,0,.94);
 
     justify-content:center;
+
     align-items:center;
 
     padding:70px 20px 30px;
 }
 
 .image-modal-content{
+
     width:100%;
+
     max-width:1000px;
 
     display:flex;
+
     flex-direction:column;
+
     align-items:center;
+
     justify-content:center;
 }
 
 .image-modal img{
+
     max-width:90%;
+
     max-height:75vh;
 
     object-fit:contain;
@@ -282,17 +367,26 @@ nav a:hover{
 }
 
 .modal-title{
+
     color:white;
+
     text-align:center;
+
     margin-bottom:15px;
+
     font-size:20px;
+
     font-weight:bold;
 }
 
 .modal-counter{
+
     color:#ddd;
+
     text-align:center;
+
     margin-top:12px;
+
     font-size:14px;
 }
 
@@ -302,14 +396,17 @@ nav a:hover{
 ========================= */
 
 .close-button{
+
     position:absolute;
 
     top:15px;
+
     right:25px;
 
     color:white;
 
     font-size:45px;
+
     font-weight:bold;
 
     cursor:pointer;
@@ -318,6 +415,7 @@ nav a:hover{
 }
 
 .close-button:hover{
+
     color:#ffb300;
 }
 
@@ -336,6 +434,7 @@ nav a:hover{
     transform:translateY(-50%);
 
     width:50px;
+
     height:50px;
 
     border:none;
@@ -358,16 +457,33 @@ nav a:hover{
 }
 
 .prev-button{
+
     left:25px;
 }
 
 .next-button{
+
     right:25px;
 }
 
 .prev-button:hover,
 .next-button:hover{
+
     background:rgba(255,255,255,.4);
+}
+
+
+/* =========================
+   LOADING
+========================= */
+
+.loading{
+
+    color:white;
+
+    font-size:18px;
+
+    text-align:center;
 }
 
 
@@ -376,14 +492,20 @@ nav a:hover{
 ========================= */
 
 footer{
+
     background:#032752;
+
     color:white;
+
     padding:35px 7% 20px;
+
     text-align:center;
 }
 
 footer p{
+
     color:#dbe7f5;
+
     font-size:14px;
 }
 
@@ -395,12 +517,15 @@ footer p{
 @media(max-width:1050px){
 
     header{
+
         flex-direction:column;
     }
 
     .category-grid{
+
         grid-template-columns:repeat(3,1fr);
     }
+
 }
 
 
@@ -411,81 +536,107 @@ footer p{
 @media(max-width:700px){
 
     .top-bar{
+
         flex-direction:column;
+
         text-align:center;
+
         gap:4px;
     }
 
     .school-logo{
+
         width:60px;
+
         height:60px;
     }
 
     .school-name h1{
+
         font-size:16px;
     }
 
     .school-name h2{
+
         font-size:12px;
     }
 
     nav ul{
+
         gap:9px;
     }
 
     nav a{
+
         font-size:12px;
     }
 
     .page-title{
+
         padding:55px 20px;
     }
 
     .page-title h1{
+
         font-size:30px;
     }
 
     .page-title p{
+
         font-size:15px;
     }
 
     .gallery-section{
+
         padding:50px 5%;
     }
 
     .category-grid{
+
         grid-template-columns:1fr 1fr;
     }
 
     .image-modal{
+
         padding:60px 10px 20px;
     }
 
     .image-modal img{
+
         max-width:95%;
+
         max-height:70vh;
     }
 
     .prev-button,
     .next-button{
+
         width:42px;
+
         height:42px;
+
         font-size:25px;
     }
 
     .prev-button{
+
         left:10px;
     }
 
     .next-button{
+
         right:10px;
     }
 
     .close-button{
+
         right:15px;
+
         top:10px;
+
         font-size:40px;
     }
+
 }
 
 
@@ -496,16 +647,19 @@ footer p{
 @media(max-width:450px){
 
     .category-grid{
+
         grid-template-columns:1fr;
     }
 
     .image-modal img{
+
         max-height:65vh;
     }
 
 }
 
 </style>
+
 </head>
 
 
@@ -518,9 +672,13 @@ footer p{
 
 <div class="top-bar">
 
-    <span>🇮🇳 Government of Jharkhand</span>
+<span>
+🇮🇳 Government of Jharkhand
+</span>
 
-    <span>PM SHRI School • East Singhbhum</span>
+<span>
+PM SHRI School • East Singhbhum
+</span>
 
 </div>
 
@@ -531,30 +689,35 @@ footer p{
 
 <header>
 
+
 <div class="logo-area">
 
-    <div class="school-logo">
 
-        <img
-        src="logo.png"
-        alt="PM SHRI UHS Khukradih Logo">
+<div class="school-logo">
 
-    </div>
+<img
+src="logo.png"
+alt="PM SHRI UHS Khukradih Logo">
+
+</div>
 
 
-    <div class="school-name">
+<div class="school-name">
 
-        <h1>PM SHRI UHS KHUKRADIH</h1>
+<h1>
+PM SHRI UHS KHUKRADIH
+</h1>
 
-        <h2>
-        PM SHRI UPGRADED GOVT. HIGH SCHOOL
-        </h2>
+<h2>
+PM SHRI UPGRADED GOVT. HIGH SCHOOL
+</h2>
 
-        <p>
-        Khukradih, East Singhbhum, Jharkhand
-        </p>
+<p>
+Khukradih, East Singhbhum, Jharkhand
+</p>
 
-    </div>
+</div>
+
 
 </div>
 
@@ -568,43 +731,63 @@ footer p{
 <ul>
 
 <li>
-<a href="index.html">Home</a>
+<a href="index.html">
+Home
+</a>
 </li>
 
 <li>
-<a href="about.html">About School</a>
+<a href="about.html">
+About School
+</a>
 </li>
 
 <li>
-<a href="academics.html">Academics</a>
+<a href="academics.html">
+Academics
+</a>
 </li>
 
 <li>
-<a href="staff.html">Staff</a>
+<a href="staff.html">
+Staff
+</a>
 </li>
 
 <li>
-<a href="facilities.html">Facilities</a>
+<a href="facilities.html">
+Facilities
+</a>
 </li>
 
 <li>
-<a href="gallery.html">Gallery</a>
+<a href="gallery.html">
+Gallery
+</a>
 </li>
 
 <li>
-<a href="notices.html">Notice Board</a>
+<a href="notices.html">
+Notice Board
+</a>
 </li>
 
 <li>
-<a href="events.html">Events</a>
+<a href="events.html">
+Events
+</a>
 </li>
 
 <li>
-<a href="admission.html">Admission</a>
+<a href="admission.html">
+Admission
+</a>
 </li>
 
 <li>
-<a href="contact.html">Contact</a>
+<a href="contact.html">
+Contact
+</a>
 </li>
 
 </ul>
@@ -806,7 +989,7 @@ onclick="closeImage(event)"
 
 <span
 class="close-button"
-onclick="closeImage()"
+onclick="closeImage(event)"
 >
 ×
 </span>
@@ -917,6 +1100,21 @@ async function loadGallery(
     `https://api.github.com/repos/${OWNER}/${REPO}/contents/images/${folder}`;
 
 
+    /* Show loading */
+
+    modal.style.display = "flex";
+
+    document.body.style.overflow = "hidden";
+
+    modalTitle.innerHTML =
+    title + "<br>" + hindiTitle;
+
+    modalCounter.innerHTML =
+    "Photos loading...";
+
+    zoomedImage.style.display = "none";
+
+
     try{
 
         const response =
@@ -936,21 +1134,39 @@ async function loadGallery(
         await response.json();
 
 
-        /* Only JPEG photos */
+        /* =========================
+           ACCEPT IMAGE FORMATS
+        ========================= */
 
         const photos =
         files.filter(function(file){
 
-            return file.type === "file"
-            &&
-            file.name
-            .toLowerCase()
-            .endsWith(".jpeg");
+            if(file.type !== "file"){
+
+                return false;
+
+            }
+
+
+            const name =
+            file.name.toLowerCase();
+
+
+            return(
+                name.endsWith(".jpg") ||
+                name.endsWith(".jpeg") ||
+                name.endsWith(".png") ||
+                name.endsWith(".webp")
+            );
 
         });
 
 
         if(photos.length === 0){
+
+            modal.style.display = "none";
+
+            document.body.style.overflow = "";
 
             alert(
                 "इस category में अभी कोई photo उपलब्ध नहीं है।"
@@ -961,7 +1177,9 @@ async function loadGallery(
         }
 
 
-        /* Save photos */
+        /* =========================
+           SAVE ALL PHOTOS
+        ========================= */
 
         currentPhotos =
         photos.map(function(photo){
@@ -974,34 +1192,28 @@ async function loadGallery(
         currentIndex = 0;
 
 
-        /* Show first photo */
+        /* =========================
+           SHOW FIRST PHOTO
+        ========================= */
 
-        modalTitle.innerHTML =
-        title;
-
+        zoomedImage.style.display = "block";
 
         zoomedImage.src =
         currentPhotos[currentIndex];
 
 
         modalCounter.innerHTML =
-        "Photo 1 of " + currentPhotos.length;
+        "Photo 1 of " +
+        currentPhotos.length;
 
-
-        /* Open popup */
-
-        modal.style.display =
-        "flex";
-
-
-        /* Prevent page scrolling */
-
-        document.body.style.overflow =
-        "hidden";
 
     }
 
     catch(error){
+
+        modal.style.display = "none";
+
+        document.body.style.overflow = "";
 
         alert(
             "Photos load नहीं हो पाईं। कृपया GitHub में images/" +
@@ -1015,14 +1227,13 @@ async function loadGallery(
 
 
 /* =========================
-   SHOW PHOTO
+   SHOW CURRENT IMAGE
 ========================= */
 
 function showCurrentImage(){
 
     const zoomedImage =
     document.getElementById("zoomedImage");
-
 
     const modalCounter =
     document.getElementById("modalCounter");
@@ -1119,8 +1330,7 @@ function previousImage(event){
 function closeImage(event){
 
     if(
-        event
-        &&
+        event &&
         event.target.id !== "imageModal"
     ){
 
@@ -1131,7 +1341,6 @@ function closeImage(event){
 
     const modal =
     document.getElementById("imageModal");
-
 
     const zoomedImage =
     document.getElementById("zoomedImage");
@@ -1156,52 +1365,56 @@ function closeImage(event){
 ========================= */
 
 document.addEventListener(
-"keydown",
-function(event){
+    "keydown",
+    function(event){
 
-    const modal =
-    document.getElementById("imageModal");
+        const modal =
+        document.getElementById("imageModal");
 
 
-    if(modal.style.display !== "flex"){
+        if(modal.style.display !== "flex"){
 
-        return;
+            return;
+
+        }
+
+
+        if(event.key === "ArrowRight"){
+
+            nextImage();
+
+        }
+
+
+        if(event.key === "ArrowLeft"){
+
+            previousImage();
+
+        }
+
+
+        if(event.key === "Escape"){
+
+            modal.style.display =
+            "none";
+
+
+            document.getElementById(
+                "zoomedImage"
+            ).src = "";
+
+
+            document.body.style.overflow =
+            "";
+
+        }
 
     }
-
-
-    if(event.key === "ArrowRight"){
-
-        nextImage();
-
-    }
-
-
-    if(event.key === "ArrowLeft"){
-
-        previousImage();
-
-    }
-
-
-    if(event.key === "Escape"){
-
-        modal.style.display =
-        "none";
-
-        document.getElementById(
-            "zoomedImage"
-        ).src = "";
-
-        document.body.style.overflow =
-        "";
-
-    }
-
-});
+);
 
 </script>
 
 
 </body>
+
 </html>
