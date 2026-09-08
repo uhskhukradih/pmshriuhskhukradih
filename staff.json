@@ -93,5 +93,24 @@
     "name": "Malti Hansda",
     "designation": "Orderly • आदेशपाल",
     "photo": "images/staff/MaltiHansda.jpeg"
+  },
+
+  {
+    "name": "Dolly Mardi",
+    "designation": "Coordinator Mata Samiti • माता समिति समन्वयक",
+    "photo": "images/staff/DollyMardi.jpeg"
+  },
+
+   {
+    "name": "Poma Murmu",
+    "designation": "Cook • रसोइया",
+    "photo": "images/staff/PomaMurmu.jpeg"
+  },
+
+  {
+    "name": "Sonamuni Murmu",
+    "designation": "Cook • रसोइया",
+    "photo": "images/staff/SonamuniMurmu.jpeg"
   }
+  
 ]
